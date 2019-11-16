@@ -1,0 +1,8 @@
+{
+  "name": "dvm",
+  "version": "0.1.0",
+  "repository": "https://github.com/imbsky/dvm",
+  "author": "BSKY <me@bsky.moe>",
+  "license": "Apache-2.0",
+  "private": true
+}
