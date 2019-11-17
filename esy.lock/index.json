@@ -1,5 +1,5 @@
 {
-  "checksum": "01bf707c8cd69dfd6ea386f3ecace663",
+  "checksum": "8d0ebb7a027766735e0be960ef04a208",
   "root": "dvm@link-dev:./esy.json",
   "node": {
     "refmterr@3.2.2@d41d8cd9": {
@@ -20,6 +20,20 @@
         "@opam/atdgen@opam:2.0.0@46af0360",
         "@esy-ocaml/reason@3.5.2@d41d8cd9"
       ],
+      "devDependencies": []
+    },
+    "pesy@0.4.4@d41d8cd9": {
+      "id": "pesy@0.4.4@d41d8cd9",
+      "name": "pesy",
+      "version": "0.4.4",
+      "source": {
+        "type": "install",
+        "source": [
+          "archive:https://registry.npmjs.org/pesy/-/pesy-0.4.4.tgz#sha1:af7a3f6fc8c33c0c6eb57265be0c14d5715d6b69"
+        ]
+      },
+      "overrides": [],
+      "dependencies": [],
       "devDependencies": []
     },
     "ocaml@4.8.1000@d41d8cd9": {
@@ -43,13 +57,13 @@
       "source": { "type": "link-dev", "path": ".", "manifest": "esy.json" },
       "overrides": [],
       "dependencies": [
-        "@reason-native/pastel@0.2.2@d41d8cd9",
-        "@reason-native/console@0.1.0@d41d8cd9",
-        "@opam/merlin@opam:3.3.2@7a364181", "@opam/dune@opam:1.11.4@21d66ccd"
+        "pesy@0.4.4@d41d8cd9", "@reason-native/pastel@0.2.2@d41d8cd9",
+        "@reason-native/console@0.1.0@d41d8cd9"
       ],
       "devDependencies": [
         "refmterr@3.2.2@d41d8cd9", "ocaml@4.8.1000@d41d8cd9",
-        "@esy-ocaml/reason@3.5.2@d41d8cd9"
+        "@opam/merlin@opam:3.3.2@7a364181",
+        "@opam/dune@opam:1.11.4@21d66ccd", "@esy-ocaml/reason@3.5.2@d41d8cd9"
       ]
     },
     "@reason-native/pastel@0.2.2@d41d8cd9": {

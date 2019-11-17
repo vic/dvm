@@ -5,6 +5,7 @@
   "author": "BSKY <me@bsky.moe>",
   "license": "Apache-2.0",
   "esy": { "build": "refmterr dune build" },
+  "buildDirs": { "executable": { "main": "Index", "name": "dvm.exe" } },
   "dependencies": {
     "@reason-native/console": "0.1.0",
     "@reason-native/pastel": "0.2.2"
@@ -14,6 +15,7 @@
     "@opam/dune": "1.11.4",
     "@opam/merlin": "3.3.2",
     "ocaml": "4.8.1000",
+    "pesy": "0.4.4",
     "refmterr": "3.2.2"
   }
 }
