@@ -3,5 +3,11 @@
   "version": "0.1.0",
   "repository": "https://github.com/imbsky/dvm",
   "author": "BSKY <me@bsky.moe>",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "esy": { "build": "refmterr dune build" },
+  "dependencies": {
+    "@reason-native/console": "0.1.0",
+    "@reason-native/pastel": "0.2.2"
+  },
+  "devDependencies": { "refmterr": "3.2.2" }
 }
