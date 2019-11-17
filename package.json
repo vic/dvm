@@ -4,5 +4,8 @@
   "repository": "https://github.com/imbsky/dvm",
   "author": "BSKY <me@bsky.moe>",
   "license": "Apache-2.0",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "pesy": "0.4.4"
+  }
 }
