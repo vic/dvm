@@ -9,5 +9,11 @@
     "@reason-native/console": "0.1.0",
     "@reason-native/pastel": "0.2.2"
   },
-  "devDependencies": { "refmterr": "3.2.2" }
+  "devDependencies": {
+    "@esy-ocaml/reason": "3.5.2",
+    "@opam/dune": "1.11.4",
+    "@opam/merlin": "3.3.2",
+    "ocaml": "4.8.1000",
+    "refmterr": "3.2.2"
+  }
 }

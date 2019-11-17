@@ -1,5 +1,5 @@
 {
-  "checksum": "2ffe034e38c7a5c1b0fb3bba4593be3c",
+  "checksum": "01bf707c8cd69dfd6ea386f3ecace663",
   "root": "dvm@link-dev:./esy.json",
   "node": {
     "refmterr@3.2.2@d41d8cd9": {
@@ -44,9 +44,13 @@
       "overrides": [],
       "dependencies": [
         "@reason-native/pastel@0.2.2@d41d8cd9",
-        "@reason-native/console@0.1.0@d41d8cd9"
+        "@reason-native/console@0.1.0@d41d8cd9",
+        "@opam/merlin@opam:3.3.2@7a364181", "@opam/dune@opam:1.11.4@21d66ccd"
       ],
-      "devDependencies": [ "refmterr@3.2.2@d41d8cd9" ]
+      "devDependencies": [
+        "refmterr@3.2.2@d41d8cd9", "ocaml@4.8.1000@d41d8cd9",
+        "@esy-ocaml/reason@3.5.2@d41d8cd9"
+      ]
     },
     "@reason-native/pastel@0.2.2@d41d8cd9": {
       "id": "@reason-native/pastel@0.2.2@d41d8cd9",
@@ -312,6 +316,34 @@
       ],
       "devDependencies": [
         "ocaml@4.8.1000@d41d8cd9", "@opam/dune@opam:1.11.4@21d66ccd"
+      ]
+    },
+    "@opam/merlin@opam:3.3.2@7a364181": {
+      "id": "@opam/merlin@opam:3.3.2@7a364181",
+      "name": "@opam/merlin",
+      "version": "opam:3.3.2",
+      "source": {
+        "type": "install",
+        "source": [
+          "archive:https://opam.ocaml.org/cache/sha256/1d/1d1c71e663b1e58acf19069cebd1e8d18f7dbe513c6065347d162cdd2c2de801#sha256:1d1c71e663b1e58acf19069cebd1e8d18f7dbe513c6065347d162cdd2c2de801",
+          "archive:https://github.com/ocaml/merlin/releases/download/v3.3.2/merlin-v3.3.2.tbz#sha256:1d1c71e663b1e58acf19069cebd1e8d18f7dbe513c6065347d162cdd2c2de801"
+        ],
+        "opam": {
+          "name": "merlin",
+          "version": "3.3.2",
+          "path": "esy.lock/opam/merlin.3.3.2"
+        }
+      },
+      "overrides": [],
+      "dependencies": [
+        "ocaml@4.8.1000@d41d8cd9", "@opam/yojson@opam:1.7.0@7056d985",
+        "@opam/ocamlfind@opam:1.8.1@ff07b0f9",
+        "@opam/dune@opam:1.11.4@21d66ccd", "@esy-ocaml/substs@0.0.1@d41d8cd9"
+      ],
+      "devDependencies": [
+        "ocaml@4.8.1000@d41d8cd9", "@opam/yojson@opam:1.7.0@7056d985",
+        "@opam/ocamlfind@opam:1.8.1@ff07b0f9",
+        "@opam/dune@opam:1.11.4@21d66ccd"
       ]
     },
     "@opam/menhir@opam:20190924@004407ff": {
