@@ -1,6 +1,6 @@
 {
   "checksum": "8d0ebb7a027766735e0be960ef04a208",
-  "root": "dvm@link-dev:./esy.json",
+  "root": "dvm@link-dev:./package.json",
   "node": {
     "refmterr@3.2.2@d41d8cd9": {
       "id": "refmterr@3.2.2@d41d8cd9",
@@ -50,19 +50,23 @@
       "dependencies": [],
       "devDependencies": []
     },
-    "dvm@link-dev:./esy.json": {
-      "id": "dvm@link-dev:./esy.json",
+    "dvm@link-dev:./package.json": {
+      "id": "dvm@link-dev:./package.json",
       "name": "dvm",
-      "version": "link-dev:./esy.json",
-      "source": { "type": "link-dev", "path": ".", "manifest": "esy.json" },
+      "version": "link-dev:./package.json",
+      "source": {
+        "type": "link-dev",
+        "path": ".",
+        "manifest": "package.json"
+      },
       "overrides": [],
       "dependencies": [
-        "pesy@0.4.4@d41d8cd9", "@reason-native/pastel@0.2.2@d41d8cd9",
+        "@reason-native/pastel@0.2.2@d41d8cd9",
         "@reason-native/console@0.1.0@d41d8cd9"
       ],
       "devDependencies": [
-        "refmterr@3.2.2@d41d8cd9", "ocaml@4.8.1000@d41d8cd9",
-        "@opam/merlin@opam:3.3.2@7a364181",
+        "refmterr@3.2.2@d41d8cd9", "pesy@0.4.4@d41d8cd9",
+        "ocaml@4.8.1000@d41d8cd9", "@opam/merlin@opam:3.3.2@7a364181",
         "@opam/dune@opam:1.11.4@21d66ccd", "@esy-ocaml/reason@3.5.2@d41d8cd9"
       ]
     },

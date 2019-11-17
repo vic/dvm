@@ -5,7 +5,29 @@
   "author": "BSKY <me@bsky.moe>",
   "license": "Apache-2.0",
   "private": true,
+  "esy": {
+    "build": "refmterr dune build"
+  },
+  "buildDirs": {
+    "executable": {
+      "main": "Index",
+      "name": "dvm.exe",
+      "require": [
+        "console.lib",
+        "pastel.lib"
+      ]
+    }
+  },
+  "dependencies": {
+    "@reason-native/console": "0.1.0",
+    "@reason-native/pastel": "0.2.2"
+  },
   "devDependencies": {
-    "prettier": "1.19.1"
+    "@esy-ocaml/reason": "3.5.2",
+    "@opam/dune": "1.11.4",
+    "@opam/merlin": "3.3.2",
+    "ocaml": "4.8.1000",
+    "pesy": "0.4.4",
+    "refmterr": "3.2.2"
   }
 }
