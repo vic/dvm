@@ -21,6 +21,7 @@
         "base",
         "cmdliner",
         "console.lib",
+        "lwt",
         "pastel.lib"
       ]
     },
@@ -28,9 +29,13 @@
       "name": "dvm.lib",
       "namespace": "Dvm",
       "require": [
-        "pastel.lib",
         "base",
-        "console.lib"
+        "cohttp-lwt-unix",
+        "cohttp-lwt",
+        "cohttp",
+        "console.lib",
+        "lwt",
+        "pastel.lib"
       ]
     }
   },
