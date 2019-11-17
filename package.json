@@ -29,7 +29,14 @@
     "fmt": "bash -c 'esy refmt --parse=re --in-place **/*.re'"
   },
   "dependencies": {
+    "@opam/base": "v0.12.2",
     "@opam/cmdliner": "1.0.4",
+    "@opam/cohttp": "2.4.0",
+    "@opam/cohttp-lwt": "2.4.0",
+    "@opam/cohttp-lwt-unix": "2.4.0",
+    "@opam/lwt": "4.4.0",
+    "@opam/lwt_ppx": "1.2.4",
+    "@opam/lwt_ssl": "1.1.3",
     "@reason-native/console": "0.1.0",
     "@reason-native/pastel": "0.2.2"
   },
