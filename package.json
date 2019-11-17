@@ -6,6 +6,7 @@
   "license": "Apache-2.0",
   "private": true,
   "devDependencies": {
-    "pesy": "0.4.4"
+    "pesy": "0.4.4",
+    "prettier": "1.19.1"
   }
 }

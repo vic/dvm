@@ -1,0 +1,5 @@
+_esy/
+esy.lock/
+executable/
+library/
+node_modules/
