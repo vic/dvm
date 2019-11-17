@@ -18,6 +18,7 @@
       "main": "Index",
       "name": "dvm.exe",
       "require": [
+        "cmdliner",
         "console.lib",
         "pastel.lib"
       ]
@@ -28,6 +29,7 @@
     "fmt": "bash -c 'esy refmt --parse=re --in-place **/*.re'"
   },
   "dependencies": {
+    "@opam/cmdliner": "1.0.4",
     "@reason-native/console": "0.1.0",
     "@reason-native/pastel": "0.2.2"
   },
