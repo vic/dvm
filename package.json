@@ -1,6 +1,7 @@
 {
   "name": "dvm",
   "version": "0.1.0",
+  "description": "Fast and simple Deno version manager, built-in Native Reason",
   "repository": "https://github.com/imbsky/dvm",
   "author": "BSKY <me@bsky.moe>",
   "license": "Apache-2.0",
@@ -38,6 +39,18 @@
         "lwt",
         "pastel.lib"
       ]
+    },
+    "test": {
+      "name": "test.exe",
+      "main": "Test",
+      "require": [
+        "dvm.lib",
+        "rely.lib"
+      ],
+      "flags": [
+        "-g",
+        "-linkall"
+      ]
     }
   },
   "scripts": {
@@ -60,6 +73,7 @@
     "@esy-ocaml/reason": "3.5.2",
     "@opam/dune": "1.11.4",
     "@opam/merlin": "3.3.2",
+    "@reason-native/rely": "3.1.0",
     "ocaml": "4.8.1000",
     "pesy": "0.4.4",
     "refmterr": "3.2.2"

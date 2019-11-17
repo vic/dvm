@@ -1,0 +1,3 @@
+include Library;
+
+TestFramework.cli();
