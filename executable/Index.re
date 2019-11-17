@@ -2,6 +2,8 @@ let version = Dvm.Package_Info.version;
 
 let doc = "Deno Version Manager";
 
+let exits = Cmdliner.Term.default_exits;
+
 let man = [
   `S(Cmdliner.Manpage.s_bugs),
   `P(
@@ -14,13 +16,7 @@ let _ =
     {
       (
         Cmdliner.Term.(ret(const(_ => `Help((`Pager, None))) $ const())),
-        Cmdliner.Term.info(
-          "dvm",
-          ~doc,
-          ~exits=Cmdliner.Term.default_exits,
-          ~man,
-          ~version,
-        ),
+        Cmdliner.Term.info("dvm", ~doc, ~exits, ~man, ~version),
       );
     },
     [],
