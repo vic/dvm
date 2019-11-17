@@ -7,4 +7,5 @@
    (name Dvm)
    ; Other libraries list this name in their package.json 'require' field to use this library.
    (public_name dvm.lib)
+   (libraries  pastel.lib base console.lib )
 )

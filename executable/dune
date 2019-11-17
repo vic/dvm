@@ -5,7 +5,7 @@
 (executable
    ; The entrypoint module
    (name Index)  ;  From package.json main field
-   ; The name of the executable (runnable via esy x dvm.exe)
+   ; The name of the executable (runnable via esy x dvm.exe) 
    (public_name dvm.exe)  ;  From package.json name field
-   (libraries  cmdliner console.lib pastel.lib ) ;  From package.json require field (array of strings)
+   (libraries  base cmdliner console.lib pastel.lib ) ;  From package.json require field (array of strings)
 )
