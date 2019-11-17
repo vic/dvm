@@ -6,7 +6,12 @@
   "license": "Apache-2.0",
   "private": true,
   "esy": {
-    "build": "refmterr dune build"
+    "build": "dune build",
+    "release": {
+      "releasedBinaries": [
+        "dvm.exe"
+      ]
+    }
   },
   "buildDirs": {
     "executable": {
@@ -17,6 +22,10 @@
         "pastel.lib"
       ]
     }
+  },
+  "scripts": {
+    "pesy": "env PESY_MODE=update pesy",
+    "fmt": "bash -c 'esy refmt --parse=re --in-place **/*.re'"
   },
   "dependencies": {
     "@reason-native/console": "0.1.0",
