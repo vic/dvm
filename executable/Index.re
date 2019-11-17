@@ -1,6 +1,6 @@
 let version = Dvm.Package_Info.version;
 
-let doc = "Deno Version Manager";
+let doc = "Fast and simple Deno version manager, built-in Native Reason.";
 
 let exits = Cmdliner.Term.default_exits;
 
