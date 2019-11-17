@@ -7,7 +7,7 @@
   "license": "Apache-2.0",
   "private": true,
   "esy": {
-    "build": "refmterr dune build",
+    "build": "dune build",
     "release": {
       "releasedBinaries": [
         "dvm.exe"
