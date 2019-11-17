@@ -1,6 +1,6 @@
 # dvm
 
-Fast and simple Deno version manager, built-in native ReasonML.
+Fast and simple Deno version manager, built-in Native Reason.
 
 ## Current Status
 
