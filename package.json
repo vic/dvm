@@ -15,12 +15,22 @@
   },
   "buildDirs": {
     "executable": {
-      "main": "Index",
       "name": "dvm.exe",
+      "main": "Index",
       "require": [
+        "base",
         "cmdliner",
         "console.lib",
         "pastel.lib"
+      ]
+    },
+    "library": {
+      "name": "dvm.lib",
+      "namespace": "Dvm",
+      "require": [
+        "pastel.lib",
+        "base",
+        "console.lib"
       ]
     }
   },
