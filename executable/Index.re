@@ -13,15 +13,13 @@ let man = [
 
 let sdocs = Cmdliner.Manpage.s_common_options;
 
+let baseCommand = {
+  (
+    Cmdliner.Term.(ret(const(_ => `Help((`Pager, None))) $ const())),
+    Cmdliner.Term.info("dvm", ~doc, ~exits, ~man, ~sdocs, ~version),
+  );
+};
+
 let _ =
-  Cmdliner.Term.eval_choice(
-    {
-      (
-        Cmdliner.Term.(ret(const(_ => `Help((`Pager, None))) $ const())),
-        Cmdliner.Term.info("dvm", ~doc, ~exits, ~man, ~sdocs, ~version),
-      );
-    },
-    [],
-    ~argv=Sys.argv,
-  )
+  Cmdliner.Term.eval_choice(baseCommand, [], ~argv=Sys.argv)
   |> Cmdliner.Term.exit;
