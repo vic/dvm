@@ -1,3 +1,14 @@
+let version = Dvm.Package_Info.version;
+
+let doc = "Deno Version Manager";
+
+let man = [
+  `S(Cmdliner.Manpage.s_bugs),
+  `P(
+    "Please report bugs using the issue tracker at https://github.com/imbsky/dvm/issues",
+  ),
+];
+
 let _ =
   Cmdliner.Term.eval_choice(
     {
@@ -5,14 +16,10 @@ let _ =
         Cmdliner.Term.(ret(const(_ => `Help((`Pager, None))) $ const())),
         Cmdliner.Term.info(
           "dvm",
-          ~man=[
-            `S(Cmdliner.Manpage.s_bugs),
-            `P(
-              "Please report bugs using the issue tracker at https://github.com/imbsky/dvm/issues",
-            ),
-          ],
+          ~doc,
           ~exits=Cmdliner.Term.default_exits,
-          ~doc="Deno Version Manager",
+          ~man,
+          ~version,
         ),
       );
     },

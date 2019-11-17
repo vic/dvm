@@ -21,6 +21,7 @@
         "base",
         "cmdliner",
         "console.lib",
+        "dvm.lib",
         "lwt",
         "pastel.lib"
       ]
