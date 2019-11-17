@@ -2,11 +2,6 @@
 # yarn lockfile v1
 
 
-pesy@0.4.4:
-  version "0.4.4"
-  resolved "https://registry.yarnpkg.com/pesy/-/pesy-0.4.4.tgz#af7a3f6fc8c33c0c6eb57265be0c14d5715d6b69"
-  integrity sha512-LKjwxxt0xtWmzhjEdrrGVg8Zz85aUS7zRXUADUBOuAxVXIV2zRaiwCx0tlrHbYf4Z1l9M2ksYAUKpEz03LMM/g==
-
 prettier@1.19.1:
   version "1.19.1"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.19.1.tgz#f7d7f5ff8a9cd872a7be4ca142095956a60797cb"
