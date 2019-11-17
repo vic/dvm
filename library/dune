@@ -1,4 +1,3 @@
-
 ; !!!! This dune file is generated from the package.json file by pesy. If you modify it by hand
 ; !!!! your changes will be undone! Instead, edit the package.json and then rerun 'esy pesy' at the project root.
 ; !!!! If you want to stop using pesy and manage this file by hand, change package.json's 'esy.build' command to: refmterr dune build -p  dvm
@@ -7,5 +6,5 @@
    (name Dvm)
    ; Other libraries list this name in their package.json 'require' field to use this library.
    (public_name dvm.lib)
-   (libraries  pastel.lib base console.lib )
+   (libraries  base cohttp-lwt-unix cohttp-lwt cohttp console.lib lwt pastel.lib )
 )
