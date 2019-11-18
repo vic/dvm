@@ -16,4 +16,15 @@ let baseCommand = {
   );
 };
 
-let _ = Cmdliner.Term.eval_choice(baseCommand, []) |> Cmdliner.Term.exit;
+module Commands = {
+  let tags = () => Lwt_main.run(Dvm.Tags.run);
+};
+
+let tags = {
+  Cmdliner.Term.(
+    app(const(Commands.tags), const()),
+    Cmdliner.Term.info("tags"),
+  );
+};
+
+let _ = Cmdliner.Term.eval_choice(baseCommand, [tags]) |> Cmdliner.Term.exit;
