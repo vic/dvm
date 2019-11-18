@@ -1,12 +1,11 @@
 open Lwt;
 
-let decorateString = version => {
-  Pastel.(<Pastel> <Pastel color=Red> "* " </Pastel> version </Pastel>);
+let stripQuotes = str => {
+  String.sub(str, 2, String.length(str) - 3);
 };
 
-let stripQuotes = version => {
-  let length = String.length(version) - 3;
-  String.sub(version, 2, length);
+let decorateString = version => {
+  Pastel.(<Pastel> <Pastel color=Red> "* " </Pastel> version </Pastel>);
 };
 
 let run =
@@ -21,11 +20,13 @@ let run =
         body => {
           body
           |> Yojson.Safe.from_string
-          |> Yojson.Safe.Util.map(x => x |> Yojson.Safe.Util.member("name"))
+          |> Yojson.Safe.Util.map(obj =>
+               obj |> Yojson.Safe.Util.member("name")
+             )
           |> Yojson.Safe.Util.to_list
           |> List.rev
-          |> List.iter(x =>
-               x
+          |> List.iter(ver =>
+               ver
                |> Yojson.Safe.to_basic
                |> Yojson.Basic.to_string
                |> stripQuotes
