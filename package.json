@@ -23,7 +23,6 @@
         "exe"
       ],
       "require": [
-        "base",
         "cmdliner",
         "console.lib",
         "dvm.lib",
