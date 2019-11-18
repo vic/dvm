@@ -4,7 +4,8 @@ Fast and simple Deno runtime version manager built with Native Reason.
 
 ## Current Status
 
-You probably don't want to use this, yet. If you want to work on making dvm
+You probably don't want to use this, yet. Currently under development so a lot
+of features and supports are missing. If you want to work on making dvm
 feature-complete, check out the
 [issue tracker](https://github.com/imbsky/dvm/issues)! We're not just looking
 for professional Reason developers either, beginners, documentarians, etc, are
