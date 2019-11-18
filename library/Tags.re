@@ -7,7 +7,12 @@ let stripQuotes = str => {
 };
 
 let decorateString = version => {
-  Pastel.(<Pastel> <Pastel color=Red> "* " </Pastel> version </Pastel>);
+  Pastel.(
+    <Pastel color=WhiteBright>
+      <Pastel color=Red> "* " </Pastel>
+      version
+    </Pastel>
+  );
 };
 
 let run =
