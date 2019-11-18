@@ -9,7 +9,7 @@ let man = [
   ),
 ];
 
-let baseCommand = {
+let default = {
   (
     Cmdliner.Term.(ret(const(_ => `Help((`Pager, None))) $ const())),
     Cmdliner.Term.info("dvm", ~doc, ~man, ~version),
@@ -27,4 +27,4 @@ let tags = {
   );
 };
 
-let _ = Cmdliner.Term.eval_choice(baseCommand, [tags]) |> Cmdliner.Term.exit;
+let _ = Cmdliner.Term.eval_choice(default, [tags]) |> Cmdliner.Term.exit;
