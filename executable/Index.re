@@ -1,6 +1,6 @@
 let version = Dvm.Package_Info.version;
 
-let doc = "Fast and simple Deno version manager, built-in Native Reason.";
+let doc = "Fast and simple Deno runtime version manager built with Native Reason.";
 
 let man = [
   `S(Cmdliner.Manpage.s_bugs),

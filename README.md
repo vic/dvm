@@ -1,6 +1,6 @@
 # dvm
 
-Fast and simple Deno version manager, built-in Native Reason.
+Fast and simple Deno runtime version manager built with Native Reason.
 
 ## Current Status
 
