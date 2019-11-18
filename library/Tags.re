@@ -1,5 +1,7 @@
 open Lwt;
 
+let releaseUrl = "https://api.github.com/repos/denoland/deno/tags";
+
 let stripQuotes = str => {
   String.sub(str, 2, String.length(str) - 3);
 };
@@ -9,9 +11,7 @@ let decorateString = version => {
 };
 
 let run =
-  Cohttp_lwt_unix.Client.get(
-    Uri.of_string("https://api.github.com/repos/denoland/deno/tags"),
-  )
+  Cohttp_lwt_unix.Client.get(Uri.of_string(releaseUrl))
   >>= (
     ((_, body)) => {
       body
