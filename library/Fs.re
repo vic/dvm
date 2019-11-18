@@ -6,13 +6,11 @@ let write = (path, contents) =>
 let createDvmDir =
   if (!Sys.file_exists(dvmDir)) {
     print_endline(
-      Pastel.(
-        <Pastel>
-          "The dvm directory doesn't exist. Creating "
-          <Pastel color=Red> dvmDir </Pastel>
-          " now..."
-        </Pastel>
-      ),
+      <Pastel>
+        "The dvm directory doesn't exist. Creating "
+        <Pastel color=Pastel.Red> dvmDir </Pastel>
+        " now..."
+      </Pastel>,
     );
     System.mkdir(dvmDir);
   };
