@@ -18,6 +18,7 @@ let default = {
 
 module Commands = {
   let tags = () => Tags.run();
+  let install = version => Install.run(version);
 };
 
 let tags = {
@@ -28,4 +29,16 @@ let tags = {
   );
 };
 
-let _ = Cmdliner.Term.eval_choice(default, [tags]) |> Cmdliner.Term.exit;
+let install = {
+  let version =
+    Cmdliner.Arg.(
+      required & pos(0, some(string), None) & info([], ~doc="VERSION")
+    );
+  Cmdliner.Term.(
+    const(Commands.install) $ version,
+    Cmdliner.Term.info("install"),
+  );
+};
+
+let _ =
+  Cmdliner.Term.eval_choice(default, [tags, install]) |> Cmdliner.Term.exit;
