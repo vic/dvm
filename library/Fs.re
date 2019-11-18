@@ -8,7 +8,7 @@ let createDvmDir =
     print_endline(
       <Pastel>
         "The dvm directory doesn't exist. Creating "
-        <Pastel color=Pastel.Red> dvmDir </Pastel>
+        <Pastel color=Pastel.Cyan> dvmDir </Pastel>
         " now..."
       </Pastel>,
     );
