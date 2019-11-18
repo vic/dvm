@@ -18,7 +18,7 @@ let createDvmDir = {
         </Pastel>
       ),
     );
-    let%lwt _ = Lwt_process.exec(("", [|"mkdir", "-p", dvmDir|]));
+    let%lwt _ = System.exec([|"mkdir", "-p", dvmDir|]);
     Lwt.return();
   } else {
     Lwt.return();
