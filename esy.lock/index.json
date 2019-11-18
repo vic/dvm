@@ -1,5 +1,5 @@
 {
-  "checksum": "f2569fe4104f601c761cf1dcd00a34f7",
+  "checksum": "b4e46d25e0ad77e64a6c8efc0b4d34a0",
   "root": "dvm@link-dev:./package.json",
   "node": {
     "yarn-pkg-config@github:esy-ocaml/yarn-pkg-config#cca65f99674ed2d954d28788edeb8c57fada5ed0@d41d8cd9": {
@@ -84,6 +84,7 @@
         "@opam/ppx_let@opam:v0.12.0@b52d29f3",
         "@opam/ppx_deriving_yojson@opam:3.5.1@06a1c37f",
         "@opam/ppx_deriving@opam:4.4@21d6c7a5",
+        "@opam/ocurl@opam:0.9.0@2c8b7338",
         "@opam/lwt_ssl@opam:1.1.3@9d044ebe",
         "@opam/lwt_ppx@opam:1.2.4@369f3faf", "@opam/lwt@opam:4.4.0@0357bb8b",
         "@opam/cohttp-lwt-unix@opam:2.4.0@291da716",
@@ -462,7 +463,7 @@
         "ocaml@4.8.1000@d41d8cd9",
         "@opam/dune-configurator@opam:1.0.0@4873acd8",
         "@opam/dune@opam:1.11.4@21d66ccd",
-        "@opam/conf-libssl@opam:1@974ca5fa",
+        "@opam/conf-libssl@opam:1@0be49fbe",
         "@opam/base-unix@opam:base@87d0b2eb",
         "@esy-ocaml/substs@0.0.1@d41d8cd9"
       ],
@@ -470,7 +471,7 @@
         "ocaml@4.8.1000@d41d8cd9",
         "@opam/dune-configurator@opam:1.0.0@4873acd8",
         "@opam/dune@opam:1.11.4@21d66ccd",
-        "@opam/conf-libssl@opam:1@974ca5fa",
+        "@opam/conf-libssl@opam:1@0be49fbe",
         "@opam/base-unix@opam:base@87d0b2eb"
       ]
     },
@@ -943,6 +944,41 @@
       "devDependencies": [
         "ocaml@4.8.1000@d41d8cd9", "@opam/sexplib0@opam:v0.12.0@e432406d",
         "@opam/dune@opam:1.11.4@21d66ccd", "@opam/base@opam:v0.12.2@d687150c"
+      ]
+    },
+    "@opam/ocurl@opam:0.9.0@2c8b7338": {
+      "id": "@opam/ocurl@opam:0.9.0@2c8b7338",
+      "name": "@opam/ocurl",
+      "version": "opam:0.9.0",
+      "source": {
+        "type": "install",
+        "source": [
+          "archive:https://opam.ocaml.org/cache/md5/4b/4b7dd10197135f830c28544590353841#md5:4b7dd10197135f830c28544590353841",
+          "archive:https://github.com/ygrek/ocurl/releases/download/0.9.0/ocurl-0.9.0.tar.gz#md5:4b7dd10197135f830c28544590353841",
+          "archive:https://ygrek.org.ua/p/release/ocurl/ocurl-0.9.0.tar.gz#md5:4b7dd10197135f830c28544590353841"
+        ],
+        "opam": {
+          "name": "ocurl",
+          "version": "0.9.0",
+          "path": "esy.lock/opam/ocurl.0.9.0"
+        }
+      },
+      "overrides": [
+        {
+          "opamoverride":
+            "esy.lock/overrides/opam__s__ocurl_opam__c__0.9.0_opam_override"
+        }
+      ],
+      "dependencies": [
+        "ocaml@4.8.1000@d41d8cd9", "@opam/ocamlfind@opam:1.8.1@ff07b0f9",
+        "@opam/lwt_ppx@opam:1.2.4@369f3faf", "@opam/lwt@opam:4.4.0@0357bb8b",
+        "@opam/conf-libcurl@opam:1@58ce2269",
+        "@opam/base-unix@opam:base@87d0b2eb",
+        "@esy-ocaml/substs@0.0.1@d41d8cd9"
+      ],
+      "devDependencies": [
+        "ocaml@4.8.1000@d41d8cd9", "@opam/conf-libcurl@opam:1@58ce2269",
+        "@opam/base-unix@opam:base@87d0b2eb"
       ]
     },
     "@opam/ocplib-endian@opam:1.0@aa720242": {
@@ -1764,8 +1800,8 @@
       "dependencies": [ "@esy-ocaml/substs@0.0.1@d41d8cd9" ],
       "devDependencies": []
     },
-    "@opam/conf-libssl@opam:1@974ca5fa": {
-      "id": "@opam/conf-libssl@opam:1@974ca5fa",
+    "@opam/conf-libssl@opam:1@0be49fbe": {
+      "id": "@opam/conf-libssl@opam:1@0be49fbe",
       "name": "@opam/conf-libssl",
       "version": "opam:1",
       "source": {
@@ -1775,6 +1811,26 @@
           "name": "conf-libssl",
           "version": "1",
           "path": "esy.lock/opam/conf-libssl.1"
+        }
+      },
+      "overrides": [],
+      "dependencies": [
+        "@opam/conf-pkg-config@opam:1.1@67c69c0c",
+        "@esy-ocaml/substs@0.0.1@d41d8cd9"
+      ],
+      "devDependencies": []
+    },
+    "@opam/conf-libcurl@opam:1@58ce2269": {
+      "id": "@opam/conf-libcurl@opam:1@58ce2269",
+      "name": "@opam/conf-libcurl",
+      "version": "opam:1",
+      "source": {
+        "type": "install",
+        "source": [ "no-source:" ],
+        "opam": {
+          "name": "conf-libcurl",
+          "version": "1",
+          "path": "esy.lock/opam/conf-libcurl.1"
         }
       },
       "overrides": [],

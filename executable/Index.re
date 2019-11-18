@@ -17,7 +17,7 @@ let default = {
 };
 
 module Commands = {
-  let tags = () => Lwt_main.run(Dvm.Tags.run);
+  let tags = () => Tags.run();
 };
 
 let tags = {
