@@ -9,4 +9,5 @@
    (public_name test.exe)  ;  From package.json name field
    (libraries  dvm.lib rely.lib ) ;  From package.json require field (array of strings)
    (flags ( -g -linkall )) ;  From package.json flags field
+   (modes ( native exe ))  ; From package.json modes field
 )

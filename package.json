@@ -18,6 +18,10 @@
     "executable": {
       "name": "dvm.exe",
       "main": "Index",
+      "modes": [
+        "native",
+        "exe"
+      ],
       "require": [
         "base",
         "cmdliner",
@@ -43,6 +47,10 @@
     "test": {
       "name": "test.exe",
       "main": "Test",
+      "modes": [
+        "native",
+        "exe"
+      ],
       "require": [
         "dvm.lib",
         "rely.lib"
