@@ -8,8 +8,7 @@ let write = (path, contents) => {
 };
 
 let createDvmDir = {
-  let exists = Lwt_unix.file_exists(dvmDir);
-  if%lwt (exists |> Lwt.map(x => !x)) {
+  if%lwt (Lwt_unix.file_exists(dvmDir) |> Lwt.map(x => !x)) {
     print_endline(
       Pastel.(
         <Pastel>
