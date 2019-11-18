@@ -1,4 +1,4 @@
-let run = (version) => {
+let run = version => {
   let os =
     switch (System.osType) {
     | "Darwin" => "osx"
@@ -10,7 +10,7 @@ let run = (version) => {
     switch (System.archType) {
     | "x86_64" => "x64"
     | _ => "other"
-    }
+    };
 
   let downloadUrl =
     "https://github.com/denoland/deno/releases/download/v"
@@ -56,7 +56,7 @@ let run = (version) => {
     <Pastel>
       "Deno runtime version "
       <Pastel color=Pastel.Cyan> version </Pastel>
-      " was successfully downloaded"
+      " was successfully installed!"
     </Pastel>,
   );
 };
