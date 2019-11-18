@@ -21,9 +21,10 @@ module Commands = {
 };
 
 let tags = {
+  let doc = "List all the tags via GitHub API";
   Cmdliner.Term.(
     app(const(Commands.tags), const()),
-    Cmdliner.Term.info("tags"),
+    Cmdliner.Term.info("tags", ~doc),
   );
 };
 
