@@ -3,8 +3,8 @@ let dvmDir = Filename.concat(Sys.getenv("HOME"), ".dvm");
 let write = (path, contents) =>
   Core_kernel.Out_channel.write_all(path, ~data=contents);
 
-let createDvmDir = {
-  if%lwt (Lwt_unix.file_exists(dvmDir) |> Lwt.map(x => !x)) {
+let createDvmDir =
+  if (!Sys.file_exists(dvmDir)) {
     print_endline(
       Pastel.(
         <Pastel>
@@ -15,8 +15,4 @@ let createDvmDir = {
       ),
     );
     System.mkdir(dvmDir);
-    Lwt.return();
-  } else {
-    Lwt.return();
   };
-};
