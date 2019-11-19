@@ -22,7 +22,6 @@ module Commands = {
 };
 
 let install = {
-  let doc = "Install a specific version of a Deno runtime.";
   Cmdliner.Term.(
     const(Commands.install)
     $ Cmdliner.Arg.(
@@ -34,15 +33,20 @@ let install = {
             ~docv="VERSION",
           )
       ),
-    Cmdliner.Term.info("install", ~doc),
+    Cmdliner.Term.info(
+      "install",
+      ~doc="Install a specific version of a Deno runtime.",
+    ),
   );
 };
 
 let listAll = {
-  let doc = "List all versions of a Deno runtime.";
   Cmdliner.Term.(
     app(const(Commands.listAll), const()),
-    Cmdliner.Term.info("list-all", ~doc),
+    Cmdliner.Term.info(
+      "list-all",
+      ~doc="List all versions of a Deno runtime.",
+    ),
   );
 };
 
