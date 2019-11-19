@@ -1,3 +1,15 @@
+let createDvmDir = () =>
+  if (!Sys.file_exists(Fs.dvmDir)) {
+    Console.log(
+      <Pastel>
+        "The dvm directory doesn't exist. Creating "
+        <Pastel color=Pastel.Cyan> Fs.dvmDir </Pastel>
+        " now..."
+      </Pastel>,
+    );
+    System.mkdir(Fs.dvmDir);
+  };
+
 let run = version => {
   let os =
     switch (System.osType) {
@@ -28,7 +40,7 @@ let run = version => {
   let gzipPath = Filename.concat(installDir, "deno.gz");
   let binaryPath = Filename.concat(installDir, "deno");
 
-  print_endline(
+  Console.log(
     <Pastel>
       "Downloading "
       <Pastel color=Pastel.Cyan> downloadUrl </Pastel>
@@ -37,10 +49,11 @@ let run = version => {
     </Pastel>,
   );
 
+  createDvmDir();
   System.mkdir(installDir);
   Fs.write(gzipPath, Http.get(downloadUrl));
 
-  print_endline(
+  Console.log(
     <Pastel>
       "Extracting "
       <Pastel color=Pastel.Cyan> gzipPath </Pastel>
@@ -52,7 +65,7 @@ let run = version => {
   let _ = System.gunzip(gzipPath);
   System.chmod(binaryPath, 755);
 
-  print_endline(
+  Console.log(
     <Pastel>
       "Deno runtime version "
       <Pastel color=Pastel.Cyan> version </Pastel>
