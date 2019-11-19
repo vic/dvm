@@ -57,7 +57,10 @@ let install = {
 let list = {
   Cmdliner.Term.(
     app(const(Commands.list), const()),
-    Cmdliner.Term.info("list", ~doc="List all versions of a Deno runtime."),
+    Cmdliner.Term.info(
+      "list",
+      ~doc="List installed versions of a Deno runtime.",
+    ),
   );
 };
 
@@ -102,10 +105,7 @@ let use = {
             ~docv="VERSION",
           )
       ),
-    Cmdliner.Term.info(
-      "use",
-      ~doc="Set a specific version of a Deno runtime.",
-    ),
+    Cmdliner.Term.info("use", ~doc="Set the Deno runtime version"),
   );
 };
 
