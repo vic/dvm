@@ -1,6 +1,6 @@
 {
   "name": "dvm",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Fast and simple Deno version manager, built-in Native Reason",
   "repository": "https://github.com/imbsky/dvm",
   "author": "BSKY <me@bsky.moe>",
