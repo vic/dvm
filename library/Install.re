@@ -1,13 +1,13 @@
 let createDvmDir = () =>
-  if (!Sys.file_exists(Fs.dvmDir)) {
+  if (!Sys.file_exists(Constants.dvmDir)) {
     Console.log(
       <Pastel>
         "The dvm directory doesn't exist. Creating "
-        <Pastel color=Pastel.Cyan> Fs.dvmDir </Pastel>
+        <Pastel color=Pastel.Cyan> Constants.dvmDir </Pastel>
         " now..."
       </Pastel>,
     );
-    System.mkdir(Fs.dvmDir);
+    System.mkdir(Constants.dvmDir);
   };
 
 let run = version => {
@@ -36,7 +36,7 @@ let run = version => {
     ++ ".gz";
 
   let installDir =
-    Filename.concat(Filename.concat(Fs.dvmDir, "installs"), version);
+    Filename.concat(Filename.concat(Constants.dvmDir, "installs"), version);
   let gzipPath = Filename.concat(installDir, "deno.gz");
   let binaryPath = Filename.concat(installDir, "deno");
 
