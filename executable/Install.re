@@ -17,7 +17,7 @@ let run = version => {
     </Pastel>,
   );
 
-  Fs.createDvmDir();
+  Util.Install.createDvmDir();
   System.mkdir(installDir);
   Fs.write(gzipPath, Http.Curl.get(downloadUrl));
 

@@ -9,6 +9,18 @@ module Install = {
     ++ "_"
     ++ System.arch
     ++ ".gz";
+
+  let createDvmDir = () =>
+    if (!Sys.file_exists(Constant.dvmDir)) {
+      Console.log(
+        <Pastel>
+          "The dvm directory doesn't exist. Creating "
+          <Pastel color=Pastel.Cyan> Constant.dvmDir </Pastel>
+          " now..."
+        </Pastel>,
+      );
+      System.mkdir(Constant.dvmDir);
+    };
 };
 
 module ListAll = {
