@@ -58,3 +58,18 @@ module Dotfile = {
       ? denoVersion |> Fs.read |> String.trim
       : failwith("Could not find .deno-version file");
 };
+
+module Use = {
+  let currentDir = Filename.concat(Constant.dvmDir, "current");
+  let createCurrentDir = () =>
+    if (!Sys.file_exists(currentDir)) {
+      Console.log(
+        <Pastel>
+          "The dvm directory does not exist. Creating "
+          <Pastel color=Pastel.Cyan> currentDir </Pastel>
+          " now..."
+        </Pastel>,
+      );
+      System.mkdir(currentDir);
+    };
+};
