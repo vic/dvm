@@ -1,33 +1,19 @@
+open Dvm;
+
 let run = version => {
-  let os =
-    switch (Dvm.System.osType) {
-    | "Darwin" => "osx"
-    | "Linux" => "linux"
-    | _ => "other"
-    };
-
-  let arch =
-    switch (Dvm.System.archType) {
-    | "x86_64" => "x64"
-    | _ => "other"
-    };
-
   let downloadUrl =
     "https://github.com/denoland/deno/releases/download/v"
     ++ version
     ++ "/"
     ++ "deno"
     ++ "_"
-    ++ os
+    ++ System.os
     ++ "_"
-    ++ arch
+    ++ System.arch
     ++ ".gz";
 
   let installDir =
-    Filename.concat(
-      Filename.concat(Dvm.Constants.dvmDir, "installs"),
-      version,
-    );
+    Filename.concat(Filename.concat(Constants.dvmDir, "installs"), version);
   let gzipPath = Filename.concat(installDir, "deno.gz");
   let binaryPath = Filename.concat(installDir, "deno");
 
@@ -40,9 +26,9 @@ let run = version => {
     </Pastel>,
   );
 
-  Dvm.Fs.createDvmDir();
-  Dvm.System.mkdir(installDir);
-  Dvm.Fs.write(gzipPath, Dvm.Http.get(downloadUrl));
+  Fs.createDvmDir();
+  System.mkdir(installDir);
+  Fs.write(gzipPath, Http.get(downloadUrl));
 
   Console.log(
     <Pastel>
@@ -53,8 +39,8 @@ let run = version => {
     </Pastel>,
   );
 
-  let _ = Dvm.System.gunzip(gzipPath);
-  Dvm.System.chmod(binaryPath, 755);
+  let _ = System.gunzip(gzipPath);
+  System.chmod(binaryPath, 755);
 
   Console.log(
     <Pastel>
