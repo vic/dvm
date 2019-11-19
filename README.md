@@ -8,5 +8,5 @@ You probably don't want to use this, yet.
 
 ## License
 
-&copy; Contributors Licensed under an
-[Apache-2.0](https://github.com/imbsky/dvm/blob/master/LICENSE) license.
+&copy; Contributors Licensed under the
+[Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0).
