@@ -1,19 +1,10 @@
 open Dvm;
 
 let run = version => {
-  let downloadUrl =
-    "https://github.com/denoland/deno/releases/download/v"
-    ++ version
-    ++ "/"
-    ++ "deno"
-    ++ "_"
-    ++ System.os
-    ++ "_"
-    ++ System.arch
-    ++ ".gz";
+  let downloadUrl = Util.Install.createDownloadUrl(version);
 
   let installDir =
-    Filename.concat(Filename.concat(Constants.dvmDir, "installs"), version);
+    Filename.concat(Filename.concat(Constant.dvmDir, "installs"), version);
   let gzipPath = Filename.concat(installDir, "deno.gz");
   let binaryPath = Filename.concat(installDir, "deno");
 
