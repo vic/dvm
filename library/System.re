@@ -2,12 +2,17 @@ let mkdir = path => Core.Unix.mkdir_p(path);
 
 let chmod = (path, perm) => Core.Unix.chmod(path, ~perm);
 
-let osType = {
-  Core.Unix.Utsname.sysname(Core.Unix.uname());
-};
+let os =
+  switch (Core.Unix.Utsname.sysname(Core.Unix.uname())) {
+  | "Darwin" => "osx"
+  | "Linux" => "linux"
+  | _ => failwith("Unsupported operating system")
+  };
 
-let archType = {
-  Core.Unix.Utsname.machine(Core.Unix.uname());
-};
+let arch =
+  switch (Core.Unix.Utsname.machine(Core.Unix.uname())) {
+  | "x86_64" => "x64"
+  | _ => failwith("Unsupported architecture")
+  };
 
 let gunzip = path => Sys.command("gunzip " ++ path);
