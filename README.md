@@ -9,35 +9,6 @@ feature-complete, don't hesitate to open PR! We're not just looking for
 professional Reason developers either, beginners, documentarians, etc, are
 highly welcome!
 
-## Hacking on the code
-
-### Prerequisites
-
-- esy
-- git
-
-### Getting the source
-
-You can clone the source from GitHub with
-
-```console
-git clone https://github.com/imbsky/dvm.git
-```
-
-You can complete the setup of your development environment with
-
-```console
-cd dvm
-esy
-```
-
-You can build and test this package with
-
-```console
-esy build
-esy x dvm.exe
-```
-
 ## License
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
