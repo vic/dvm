@@ -1,0 +1,53 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  release:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macOS-latest]
+        node-version: [13.x]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v1
+
+      - name: Install libcurl4-openssl-dev package for Ubuntu
+        if: matrix.os == 'ubuntu-latest'
+        run: sudo apt install libcurl4-openssl-dev
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install esy
+        run: npm install --global esy
+
+      - name: Install and build OCaml packages
+        if: steps.esy.outputs.cache-hit != 'true'
+        run: esy
+
+      - name: Compile Reason to binary
+        run: esy build
+
+      - name: Copy and rename binary
+        run: bash scripts/copy-static-binary.sh
+
+      - name: Prepare release asset
+        run: tar -zcvf dvm-x86_64-${{ matrix.os }}.tar.gz dvm
+
+      - name: Create release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: Release $GIT_TAG
+          files: dvm-x86_64-${{ matrix.os }}.tar.gz
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_TAG: $(git describe --abbrev=0 --tags)
