@@ -102,5 +102,8 @@ let use = {
 };
 
 let _ =
-  Cmdliner.Term.eval_choice(default, [init, install, listAll, uninstall, use])
+  Cmdliner.Term.eval_choice(
+    default,
+    [init, install, listAll, uninstall, use],
+  )
   |> Cmdliner.Term.exit;
