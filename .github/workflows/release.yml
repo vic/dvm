@@ -46,8 +46,6 @@ jobs:
       - name: Create release
         uses: softprops/action-gh-release@v1
         with:
-          name: Release $GIT_TAG
           files: dvm-x86_64-${{ matrix.os }}.tar.gz
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GIT_TAG: $(git describe --abbrev=0 --tags)
