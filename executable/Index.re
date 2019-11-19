@@ -31,7 +31,7 @@ let init = {
   Cmdliner.Term.(
     const(Commands.init)
     $ Cmdliner.Arg.(required & pos(0, some(string), None) & info([])),
-    Cmdliner.Term.info("init", ~doc="Output the path for your shell."),
+    Cmdliner.Term.info("init", ~doc="Print the main initialization script."),
   );
 };
 
@@ -105,7 +105,7 @@ let use = {
             ~docv="VERSION",
           )
       ),
-    Cmdliner.Term.info("use", ~doc="Set the Deno runtime version"),
+    Cmdliner.Term.info("use", ~doc="Set the Deno runtime version."),
   );
 };
 
