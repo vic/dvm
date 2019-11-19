@@ -1,4 +1,6 @@
-let mkdir = path => Core.Unix.mkdir_p(path);
+let mkdir = Core.Unix.mkdir_p;
+
+let rm = Unix.unlink;
 
 let chmod = (path, perm) => Core.Unix.chmod(path, ~perm);
 

@@ -21,6 +21,7 @@ let default = {
 module Commands = {
   let install = version => Install.run(version);
   let listAll = () => ListAll.run();
+  let use = version => Use.run(version);
 };
 
 let install = {
@@ -52,6 +53,25 @@ let listAll = {
   );
 };
 
+let use = {
+  Cmdliner.Term.(
+    const(Commands.use)
+    $ Cmdliner.Arg.(
+        required
+        & pos(0, some(string), None)
+        & info(
+            [],
+            ~doc="Specify the version to use in $(docv).",
+            ~docv="VERSION",
+          )
+      ),
+    Cmdliner.Term.info(
+      "use",
+      ~doc="Set a specific version of a Deno runtime.",
+    ),
+  );
+};
+
 let _ =
-  Cmdliner.Term.eval_choice(default, [install, listAll])
+  Cmdliner.Term.eval_choice(default, [install, listAll, use])
   |> Cmdliner.Term.exit;
