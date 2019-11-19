@@ -21,6 +21,7 @@ let default = {
 module Commands = {
   let init = shell => Init.run(shell);
   let install = version => Install.run(version);
+  let list = () => List.run();
   let listAll = () => ListAll.run();
   let uninstall = version => Uninstall.run(version);
   let use = version => Use.run(version);
@@ -50,6 +51,13 @@ let install = {
       "install",
       ~doc="Install a specific version of a Deno runtime.",
     ),
+  );
+};
+
+let list = {
+  Cmdliner.Term.(
+    app(const(Commands.list), const()),
+    Cmdliner.Term.info("list", ~doc="List all versions of a Deno runtime."),
   );
 };
 
@@ -104,6 +112,6 @@ let use = {
 let _ =
   Cmdliner.Term.eval_choice(
     default,
-    [init, install, listAll, uninstall, use],
+    [init, install, list, listAll, uninstall, use],
   )
   |> Cmdliner.Term.exit;

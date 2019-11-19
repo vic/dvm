@@ -1,3 +1,7 @@
+let decorateString = version => {
+  <Pastel> <Pastel color=Pastel.Red> "* " </Pastel> version </Pastel>;
+};
+
 module Install = {
   let createDownloadUrl = version =>
     "https://github.com/denoland/deno/releases/download/v"
@@ -26,10 +30,6 @@ module Install = {
 module ListAll = {
   let stripQuotes = str => {
     String.sub(str, 2, String.length(str) - 3);
-  };
-
-  let decorateString = version => {
-    <Pastel> <Pastel color=Pastel.Red> "* " </Pastel> version </Pastel>;
   };
 
   let parse = body => {
@@ -70,6 +70,7 @@ module Use = {
           " now..."
         </Pastel>,
       );
+
       System.mkdir(currentDir);
     };
 };
