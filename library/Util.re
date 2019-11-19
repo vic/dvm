@@ -65,7 +65,7 @@ module Use = {
     if (!Sys.file_exists(currentDir)) {
       Console.log(
         <Pastel>
-          "The dvm directory does not exist. Creating "
+          "The current directory does not exist. Creating "
           <Pastel color=Pastel.Cyan> currentDir </Pastel>
           " now..."
         </Pastel>,
