@@ -6,9 +6,7 @@ module Install = {
   let createDownloadUrl = version =>
     "https://github.com/denoland/deno/releases/download/v"
     ++ version
-    ++ "/"
-    ++ "deno"
-    ++ "_"
+    ++ "/deno_"
     ++ System.os
     ++ "_"
     ++ System.arch
