@@ -14,7 +14,7 @@ module Install = {
     if (!Sys.file_exists(Constant.dvmDir)) {
       Console.log(
         <Pastel>
-          "The dvm directory doesn't exist. Creating "
+          "The dvm directory does not exist. Creating "
           <Pastel color=Pastel.Cyan> Constant.dvmDir </Pastel>
           " now..."
         </Pastel>,
