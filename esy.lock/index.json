@@ -1,5 +1,5 @@
 {
-  "checksum": "249e55bce861a102c79ae01da9db07f9",
+  "checksum": "41cdce5b3cb3eb9ae8e8b5e3eb005efa",
   "root": "dvm@link-dev:./package.json",
   "node": {
     "yarn-pkg-config@github:esy-ocaml/yarn-pkg-config#cca65f99674ed2d954d28788edeb8c57fada5ed0@d41d8cd9": {
@@ -87,8 +87,7 @@
         "@opam/ocurl@opam:0.9.0@2c8b7338",
         "@opam/core_kernel@opam:v0.12.3@cae99f69",
         "@opam/core@opam:v0.12.4@4028204c",
-        "@opam/cmdliner@opam:1.0.4@93208aac",
-        "@opam/base@opam:v0.12.2@d687150c"
+        "@opam/cmdliner@opam:1.0.4@93208aac"
       ],
       "devDependencies": [
         "refmterr@3.2.2@d41d8cd9", "pesy@0.4.4@d41d8cd9",

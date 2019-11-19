@@ -42,7 +42,6 @@
         "ppx_let"
       ],
       "require": [
-        "base",
         "console.lib",
         "core_kernel",
         "core",
@@ -73,7 +72,6 @@
     "fmt": "bash -c 'esy refmt --parse=re --in-place **/*.re'"
   },
   "dependencies": {
-    "@opam/base": "v0.12.2",
     "@opam/cmdliner": "1.0.4",
     "@opam/core": "v0.12.4",
     "@opam/core_kernel": "v0.12.3",
