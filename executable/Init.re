@@ -6,7 +6,7 @@ let run = shell => {
     | "bash" =>
       "export PATH="
       ++ Filename.concat(Constant.dvmDir, "current")
-      ++ "/bin:$PATH"
+      ++ ":$PATH"
     | "fish" =>
       "set -gx PATH "
       ++ Filename.concat(Constant.dvmDir, "current")
