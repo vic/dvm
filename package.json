@@ -25,6 +25,8 @@
       "require": [
         "cmdliner",
         "console.lib",
+        "core_kernel",
+        "core",
         "dvm.lib",
         "pastel.lib"
       ]
