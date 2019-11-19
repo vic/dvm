@@ -11,7 +11,7 @@ let run = shell => {
       "set -gx PATH "
       ++ Filename.concat(Constant.dvmDir, "current")
       ++ " $PATH;"
-    | _ => failwith("Unsupported shell")
+    | _ => failwith(shell ++ " not supported")
     };
 
   Console.log(output);

@@ -13,17 +13,20 @@ let rec rmrf = path =>
 
 let chmod = (path, perm) => Core.Unix.chmod(path, ~perm);
 
+let sysname = Core.Unix.Utsname.sysname(Core.Unix.uname());
+let machine = Core.Unix.Utsname.machine(Core.Unix.uname());
+
 let os =
-  switch (Core.Unix.Utsname.sysname(Core.Unix.uname())) {
+  switch (sysname) {
   | "Darwin" => "osx"
   | "Linux" => "linux"
-  | _ => failwith("Unsupported operating system")
+  | _ => failwith(sysname ++ " not supported")
   };
 
 let arch =
-  switch (Core.Unix.Utsname.machine(Core.Unix.uname())) {
+  switch (machine) {
   | "x86_64" => "x64"
-  | _ => failwith("Unsupported architecture")
+  | _ => failwith(machine ++ " not supported")
   };
 
 let gunzip = path => Sys.command("gunzip " ++ path);
