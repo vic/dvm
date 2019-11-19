@@ -19,7 +19,7 @@ let run = version => {
 
   Fs.createDvmDir();
   System.mkdir(installDir);
-  Fs.write(gzipPath, Http.get(downloadUrl));
+  Fs.write(gzipPath, Http.Curl.get(downloadUrl));
 
   Console.log(
     <Pastel>
