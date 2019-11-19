@@ -1,18 +1,20 @@
-let version = Dvm.Package_Info.version;
-
-let doc = "Fast and simple Deno runtime version manager built with Native Reason.";
-
-let man = [
-  `S(Cmdliner.Manpage.s_bugs),
-  `P(
-    "Please report bugs using the issue tracker at https://github.com/imbsky/dvm/issues",
-  ),
-];
+open Dvm;
 
 let default = {
   (
     Cmdliner.Term.(ret(const(_ => `Help((`Pager, None))) $ const())),
-    Cmdliner.Term.info("dvm", ~doc, ~man, ~version),
+    Cmdliner.Term.info(
+      "dvm",
+      ~doc=
+        "Fast and simple Deno runtime version manager built with Native Reason.",
+      ~man=[
+        `S(Cmdliner.Manpage.s_bugs),
+        `P(
+          "Please report bugs using the issue tracker at https://github.com/imbsky/dvm/issues",
+        ),
+      ],
+      ~version=Package_Info.version,
+    ),
   );
 };
 
