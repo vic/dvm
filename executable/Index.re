@@ -17,28 +17,27 @@ let default = {
 };
 
 module Commands = {
-  let tags = () => Tags.run();
+  let listAll = () => ListAll.run();
   let install = version => Install.run(version);
 };
 
-let tags = {
-  let doc = "List all the tags via GitHub API";
+let listAll = {
+  let doc = "List all versions of a Deno runtime.";
   Cmdliner.Term.(
-    app(const(Commands.tags), const()),
-    Cmdliner.Term.info("tags", ~doc),
+    app(const(Commands.listAll), const()),
+    Cmdliner.Term.info("list-all", ~doc),
   );
 };
 
 let install = {
-  let version =
-    Cmdliner.Arg.(
-      required & pos(0, some(string), None) & info([], ~doc="VERSION")
-    );
+  let doc = "Install a specific version of a Deno runtime.";
   Cmdliner.Term.(
-    const(Commands.install) $ version,
-    Cmdliner.Term.info("install"),
+    const(Commands.install)
+    $ Cmdliner.Arg.(required & pos(0, some(string), None) & info([])),
+    Cmdliner.Term.info("install", ~doc),
   );
 };
 
 let _ =
-  Cmdliner.Term.eval_choice(default, [tags, install]) |> Cmdliner.Term.exit;
+  Cmdliner.Term.eval_choice(default, [listAll, install])
+  |> Cmdliner.Term.exit;
