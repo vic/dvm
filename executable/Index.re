@@ -21,6 +21,7 @@ let default = {
 module Commands = {
   let install = version => Install.run(version);
   let listAll = () => ListAll.run();
+  let uninstall = version => Uninstall.run(version);
   let use = version => Use.run(version);
 };
 
@@ -53,6 +54,25 @@ let listAll = {
   );
 };
 
+let uninstall = {
+  Cmdliner.Term.(
+    const(Commands.uninstall)
+    $ Cmdliner.Arg.(
+        required
+        & pos(0, some(string), None)
+        & info(
+            [],
+            ~doc="Specify the version to uninstall in $(docv).",
+            ~docv="VERSION",
+          )
+      ),
+    Cmdliner.Term.info(
+      "uninstall",
+      ~doc="Uninstall a specific version of a Deno runtime.",
+    ),
+  );
+};
+
 let use = {
   Cmdliner.Term.(
     const(Commands.use)
@@ -73,5 +93,5 @@ let use = {
 };
 
 let _ =
-  Cmdliner.Term.eval_choice(default, [install, listAll, use])
+  Cmdliner.Term.eval_choice(default, [install, listAll, uninstall, use])
   |> Cmdliner.Term.exit;

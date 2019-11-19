@@ -1,6 +1,15 @@
 let mkdir = Core.Unix.mkdir_p;
 
-let rm = Unix.unlink;
+let rm = Sys.remove;
+
+let rec rmrf = path =>
+  Sys.is_directory(path)
+    ? {
+      Sys.readdir(path)
+      |> Array.iter(filename => rmrf(Filename.concat(path, filename)));
+      Unix.rmdir(path);
+    }
+    : Sys.remove(path);
 
 let chmod = (path, perm) => Core.Unix.chmod(path, ~perm);
 
