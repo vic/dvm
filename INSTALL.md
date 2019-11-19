@@ -5,27 +5,38 @@ source.
 
 ## Download a prebuilt binary from GitHub (recommended)
 
-Open the latest successful build from the
-[Actions](https://github.com/imbsky/dvm/actions) tab and copy the link for your
-operating system from the artifact in the upper right.
-
 You can download the prebuilt binary from GitHub with
 
+##### Linux
+
 ```console
-curl -sL <download link> -o dvm.zip
+curl -sL https://github.com/imbsky/dvm/releases/latest/download/dvm-x86_64-ubuntu-latest.tar.gz -o dvm-x86_64-ubuntu-latest.tar.gz
+```
+
+##### macOS
+
+```console
+curl -sL https://github.com/imbsky/dvm/releases/latest/download/dvm-x86_64-macOS-latest.tar.gz -o dvm-x86_64-macOS-latest.tar.gz
 ```
 
 You can unzip the zip file with
 
+##### Linux
+
 ```console
-unzip dvm.zip
+tar zxf dvm-x86_64-ubuntu-latest.tar.gz
+```
+
+##### macOS
+
+```console
+tar zxf dvm-x86_64-macOS-latest.tar.gz
 ```
 
 You can install dvm with
 
 ```console
-cd <dvm-ubuntu-latest or dvm-macOS-latest>
-sudo install <downloaded file> /usr/local/bin/dvm
+sudo install dvm /usr/local/bin/dvm
 ```
 
 Add the init script to your shell's config file with
