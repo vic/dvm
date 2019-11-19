@@ -53,7 +53,7 @@ module ListAll = {
 
 module Dotfile = {
   let denoVersion = Filename.concat(Sys.getcwd(), ".deno-version");
-  let getVersion =
+  let getVersion = () =>
     Sys.file_exists(denoVersion) === true
       ? denoVersion |> Fs.read |> String.trim
       : failwith("Could not find .deno-version file");
