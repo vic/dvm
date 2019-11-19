@@ -17,16 +17,8 @@ let default = {
 };
 
 module Commands = {
-  let listAll = () => ListAll.run();
   let install = version => Install.run(version);
-};
-
-let listAll = {
-  let doc = "List all versions of a Deno runtime.";
-  Cmdliner.Term.(
-    app(const(Commands.listAll), const()),
-    Cmdliner.Term.info("list-all", ~doc),
-  );
+  let listAll = () => ListAll.run();
 };
 
 let install = {
@@ -38,6 +30,14 @@ let install = {
   );
 };
 
+let listAll = {
+  let doc = "List all versions of a Deno runtime.";
+  Cmdliner.Term.(
+    app(const(Commands.listAll), const()),
+    Cmdliner.Term.info("list-all", ~doc),
+  );
+};
+
 let _ =
-  Cmdliner.Term.eval_choice(default, [listAll, install])
+  Cmdliner.Term.eval_choice(default, [install, listAll])
   |> Cmdliner.Term.exit;
