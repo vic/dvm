@@ -1,4 +1,4 @@
-# dvm
+# dvm [![Main workflow](https://github.com/imbsky/dvm/workflows/Main%20workflow/badge.svg)](https://github.com/imbsky/dvm/actions)
 
 Fast and simple Deno runtime version manager built with Native Reason.
 
