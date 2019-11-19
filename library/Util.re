@@ -51,7 +51,7 @@ module ListAll = {
   };
 };
 
-module Local = {
+module Dotfile = {
   let denoVersion = Filename.concat(Sys.getcwd(), ".deno-version");
   let getVersion =
     Sys.file_exists(denoVersion) === true
