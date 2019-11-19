@@ -3,7 +3,7 @@ let stripQuotes = str => {
 };
 
 let decorateString = version => {
-  <Pastel> <Pastel color=Pastel.Red> "* " </Pastel> version </Pastel>;
+  <Pastel> <Pastel color=Pastel.Cyan> "* " </Pastel> version </Pastel>;
 };
 
 let parse = body => {
