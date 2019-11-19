@@ -25,7 +25,15 @@ let install = {
   let doc = "Install a specific version of a Deno runtime.";
   Cmdliner.Term.(
     const(Commands.install)
-    $ Cmdliner.Arg.(required & pos(0, some(string), None) & info([])),
+    $ Cmdliner.Arg.(
+        required
+        & pos(0, some(string), None)
+        & info(
+            [],
+            ~doc="Specify the version to install in $(docv).",
+            ~docv="VERSION",
+          )
+      ),
     Cmdliner.Term.info("install", ~doc),
   );
 };
