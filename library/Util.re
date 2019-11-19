@@ -38,3 +38,11 @@ module ListAll = {
        );
   };
 };
+
+module Local = {
+  let denoVersion = Filename.concat(Sys.getcwd(), ".deno-version");
+  let getVersion =
+    Sys.file_exists(denoVersion) === true
+      ? denoVersion |> Fs.read |> String.trim
+      : failwith("Could not find .deno-version file");
+};
