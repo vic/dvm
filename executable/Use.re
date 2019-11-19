@@ -13,16 +13,12 @@ let run = version => {
     System.rm(currentBinaryPath);
   };
 
-  Console.log(
-    <Pastel>
-      "Creating "
-      <Pastel color=Pastel.Cyan> binaryPath </Pastel>
-      " as a symbolic link to the "
-      <Pastel color=Pastel.Cyan> currentBinaryPath </Pastel>
-    </Pastel>,
-  );
-
   Fs.createSymlink(binaryPath, currentBinaryPath);
 
-  Console.log(<Pastel> "Symbolic link was successfully created!" </Pastel>);
+  Console.log(
+    <Pastel>
+      "Now using Deno runtime "
+      <Pastel color=Pastel.Red underline=true> version </Pastel>
+    </Pastel>,
+  );
 };

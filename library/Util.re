@@ -15,7 +15,7 @@ module Install = {
       Console.log(
         <Pastel>
           "The dvm directory does not exist. Creating "
-          <Pastel color=Pastel.Cyan> Constant.dvmDir </Pastel>
+          <Pastel color=Pastel.Red> Constant.dvmDir </Pastel>
           " now..."
         </Pastel>,
       );
@@ -29,7 +29,7 @@ module ListAll = {
   };
 
   let decorateString = version => {
-    <Pastel> <Pastel color=Pastel.Cyan> "* " </Pastel> version </Pastel>;
+    <Pastel> <Pastel color=Pastel.Red> "* " </Pastel> version </Pastel>;
   };
 
   let parse = body => {
@@ -66,7 +66,7 @@ module Use = {
       Console.log(
         <Pastel>
           "The current directory does not exist. Creating "
-          <Pastel color=Pastel.Cyan> currentDir </Pastel>
+          <Pastel color=Pastel.Red> currentDir </Pastel>
           " now..."
         </Pastel>,
       );

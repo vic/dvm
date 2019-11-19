@@ -8,27 +8,9 @@ let run = version => {
   let gzipPath = Filename.concat(installDir, "deno.gz");
   let binaryPath = Filename.concat(installDir, "deno");
 
-  Console.log(
-    <Pastel>
-      "Downloading "
-      <Pastel color=Pastel.Cyan> downloadUrl </Pastel>
-      " to "
-      <Pastel color=Pastel.Cyan> installDir </Pastel>
-    </Pastel>,
-  );
-
   Util.Install.createDvmDir();
   System.mkdir(installDir);
   Fs.write(gzipPath, Http.Curl.get(downloadUrl));
-
-  Console.log(
-    <Pastel>
-      "Extracting "
-      <Pastel color=Pastel.Cyan> gzipPath </Pastel>
-      " to "
-      <Pastel color=Pastel.Cyan> binaryPath </Pastel>
-    </Pastel>,
-  );
 
   let _ = System.gunzip(gzipPath);
   System.chmod(binaryPath, 755);
@@ -36,7 +18,7 @@ let run = version => {
   Console.log(
     <Pastel>
       "Deno runtime version "
-      <Pastel color=Pastel.Cyan underline=true> version </Pastel>
+      <Pastel color=Pastel.Red underline=true> version </Pastel>
       " was successfully installed!"
     </Pastel>,
   );
