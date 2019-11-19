@@ -19,10 +19,19 @@ let default = {
 };
 
 module Commands = {
+  let init = shell => Init.run(shell);
   let install = version => Install.run(version);
   let listAll = () => ListAll.run();
   let uninstall = version => Uninstall.run(version);
   let use = version => Use.run(version);
+};
+
+let init = {
+  Cmdliner.Term.(
+    const(Commands.init)
+    $ Cmdliner.Arg.(required & pos(0, some(string), None) & info([])),
+    Cmdliner.Term.info("init", ~doc="Output the path for your shell."),
+  );
 };
 
 let install = {
@@ -93,5 +102,5 @@ let use = {
 };
 
 let _ =
-  Cmdliner.Term.eval_choice(default, [install, listAll, uninstall, use])
+  Cmdliner.Term.eval_choice(default, [init, install, listAll, uninstall, use])
   |> Cmdliner.Term.exit;
