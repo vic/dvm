@@ -73,7 +73,6 @@
     "fmt": "bash -c 'esy refmt --parse=re --in-place **/*.re'"
   },
   "dependencies": {
-    "@esy-ocaml/reason": "3.5.2",
     "@opam/base": "v0.12.2",
     "@opam/cmdliner": "1.0.4",
     "@opam/core": "v0.12.4",
