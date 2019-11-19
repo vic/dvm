@@ -2,13 +2,24 @@
 
 Fast and simple Deno runtime version manager built with Native Reason.
 
-## Current Status
+## Current status
 
 You probably don't want to use this, yet.
 
 ## Installation
 
 See the file [INSTALL.md](INSTALL.md) for installation instructions.
+
+## All commands
+
+| Command                 | Effect                                          |
+| ----------------------- | ----------------------------------------------- |
+| dvm install [version]   | Install a specific version of a Deno runtime.   |
+| dvm uninstall [version] | Uninstall a specific version of a Deno runtime. |
+| dvm use [version]       | Set the Deno runtime version                    |
+| dvm list                | List installed versions of a Deno runtime.      |
+| dvm list-all            | List all versions of a Deno runtime.            |
+| dvm init [shell name]   | Print the main initialization script.           |
 
 ## License
 
