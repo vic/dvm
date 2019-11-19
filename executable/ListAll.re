@@ -1,6 +1,6 @@
 open Dvm;
 
 let run = () =>
-  Version.parse(
+  Util.ListAll.parse(
     Http.get("https://api.github.com/repos/denoland/deno/releases"),
   );
