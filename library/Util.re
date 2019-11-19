@@ -23,7 +23,7 @@ module Install = {
           " now..."
         </Pastel>,
       );
-      System.mkdir(Constant.dvmDir);
+      Core.Unix.mkdir_p(Constant.dvmDir);
     };
 };
 
@@ -46,17 +46,9 @@ module ListAll = {
          |> Yojson.Basic.to_string
          |> stripQuotes
          |> decorateString
-         |> print_endline
+         |> Console.log
        );
   };
-};
-
-module Dotfile = {
-  let denoVersion = Filename.concat(Sys.getcwd(), ".deno-version");
-  let getVersion = () =>
-    Sys.file_exists(denoVersion) === true
-      ? denoVersion |> Fs.read |> String.trim
-      : failwith("Could not find .deno-version file");
 };
 
 module Use = {
@@ -70,7 +62,6 @@ module Use = {
           " now..."
         </Pastel>,
       );
-
-      System.mkdir(currentDir);
+      Core.Unix.mkdir_p(currentDir);
     };
 };

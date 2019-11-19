@@ -1,7 +1,3 @@
-let mkdir = Core.Unix.mkdir_p;
-
-let rm = Sys.remove;
-
 let rec rmrf = path =>
   Sys.is_directory(path)
     ? {
@@ -10,8 +6,6 @@ let rec rmrf = path =>
       Unix.rmdir(path);
     }
     : Sys.remove(path);
-
-let chmod = (path, perm) => Core.Unix.chmod(path, ~perm);
 
 let sysname = Core.Unix.Utsname.sysname(Core.Unix.uname());
 let machine = Core.Unix.Utsname.machine(Core.Unix.uname());
@@ -28,5 +22,3 @@ let arch =
   | "x86_64" => "x64"
   | _ => failwith(machine ++ " not supported")
   };
-
-let gunzip = path => Sys.command("gunzip " ++ path);

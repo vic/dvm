@@ -10,10 +10,10 @@ let run = version => {
   Util.Use.createCurrentDir();
 
   if (Sys.file_exists(currentBinaryPath)) {
-    System.rm(currentBinaryPath);
+    Sys.remove(currentBinaryPath);
   };
 
-  Fs.createSymlink(binaryPath, currentBinaryPath);
+  Core.Unix.symlink(~target=binaryPath, ~link_name=currentBinaryPath);
 
   Console.log(
     <Pastel>

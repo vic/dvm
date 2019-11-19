@@ -21,11 +21,14 @@ let run = version => {
     exit(1);
   };
 
-  System.mkdir(installDir);
-  Fs.write(gzipPath, Http.Curl.get(downloadUrl));
+  Core.Unix.mkdir_p(installDir);
+  Core_kernel.Out_channel.write_all(
+    gzipPath,
+    ~data=Http.Curl.get(downloadUrl),
+  );
 
-  let _ = System.gunzip(gzipPath);
-  System.chmod(binaryPath, 755);
+  let _ = Sys.command("gunzip " ++ gzipPath);
+  Core.Unix.chmod(binaryPath, ~perm=755);
 
   Console.log(
     <Pastel>
