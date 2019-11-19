@@ -9,6 +9,18 @@ let run = version => {
   let binaryPath = Filename.concat(installDir, "deno");
 
   Util.Install.createDvmDir();
+
+  if (Sys.file_exists(installDir)) {
+    Console.log(
+      <Pastel>
+        "Deno runtime version "
+        <Pastel color=Pastel.Red underline=true> version </Pastel>
+        " is already installed."
+      </Pastel>,
+    );
+    exit(1);
+  };
+
   System.mkdir(installDir);
   Fs.write(gzipPath, Http.Curl.get(downloadUrl));
 
