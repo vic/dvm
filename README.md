@@ -15,7 +15,7 @@ See the file [INSTALL.md](INSTALL.md) for installation instructions.
 | dvm use [version]       | Set the Deno runtime version.                   |
 | dvm list                | List installed versions of a Deno runtime.      |
 | dvm list-all            | List all versions of a Deno runtime.            |
-| dvm init [shell name]   | Print the initialization script.                |
+| dvm init [shell name]   | Print the path to a Deno runtime.               |
 
 ## License
 
