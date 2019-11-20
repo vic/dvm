@@ -47,7 +47,6 @@
     }
   },
   "scripts": {
-    "pesy": "env PESY_MODE=update pesy",
     "fmt": "bash -c 'esy refmt --parse=re --in-place **/*.re'"
   },
   "dependencies": {
