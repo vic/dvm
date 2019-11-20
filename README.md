@@ -17,6 +17,11 @@ See the file [INSTALL.md](INSTALL.md) for installation instructions.
 | dvm list-all            | List all versions of a Deno runtime.            |
 | dvm init [shell name]   | Print the path to a Deno runtime.               |
 
+## Bug reports and user feedback
+
+Please report bugs using the issue tracker at
+<https://github.com/imbsky/dvm/issues>
+
 ## License
 
 &copy; Contributors Licensed under the
