@@ -7,7 +7,9 @@ let run = version => {
   let currentDir = Filename.concat(Constant.dvmDir, "current");
   let currentBinaryPath = Filename.concat(currentDir, "deno");
 
-  Util.Use.createCurrentDir();
+  if (!Sys.file_exists(currentDir)) {
+    Core.Unix.mkdir_p(currentDir);
+  };
 
   if (Sys.file_exists(currentBinaryPath)) {
     Sys.remove(currentBinaryPath);

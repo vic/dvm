@@ -8,7 +8,9 @@ let run = version => {
   let gzipPath = Filename.concat(installDir, "deno.gz");
   let binaryPath = Filename.concat(installDir, "deno");
 
-  Util.Install.createDvmDir();
+  if (!Sys.file_exists(Constant.dvmDir)) {
+    Core.Unix.mkdir_p(Constant.dvmDir);
+  };
 
   if (Sys.file_exists(installDir)) {
     Console.log(

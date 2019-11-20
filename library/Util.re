@@ -11,18 +11,6 @@ module Install = {
     ++ "_"
     ++ System.arch
     ++ ".gz";
-
-  let createDvmDir = () =>
-    if (!Sys.file_exists(Constant.dvmDir)) {
-      Console.log(
-        <Pastel>
-          "The dvm directory does not exist. Creating "
-          <Pastel color=Pastel.Red> Constant.dvmDir </Pastel>
-          " now..."
-        </Pastel>,
-      );
-      Core.Unix.mkdir_p(Constant.dvmDir);
-    };
 };
 
 module ListAll = {
@@ -47,19 +35,4 @@ module ListAll = {
          |> Console.log
        );
   };
-};
-
-module Use = {
-  let currentDir = Filename.concat(Constant.dvmDir, "current");
-  let createCurrentDir = () =>
-    if (!Sys.file_exists(currentDir)) {
-      Console.log(
-        <Pastel>
-          "The current directory does not exist. Creating "
-          <Pastel color=Pastel.Red> currentDir </Pastel>
-          " now..."
-        </Pastel>,
-      );
-      Core.Unix.mkdir_p(currentDir);
-    };
 };
