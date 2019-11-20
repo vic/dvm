@@ -7,7 +7,7 @@ let run = () => {
     Core.Unix.mkdir_p(installDir);
   };
 
-  Core.Sys.ls_dir(Filename.concat(Constant.dvmDir, "installs"))
+  Core.Sys.ls_dir(installDir)
   |> List.rev
   |> List.iter(ver => ver |> Util.decorateString |> Console.log);
 };
