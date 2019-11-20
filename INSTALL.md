@@ -3,6 +3,12 @@
 You can download a prebuilt binary from GitHub or build it yourself from the
 source.
 
+## Homebrew (recommended for macOS users)
+
+```console
+brew install imbsky/tap/dvm
+```
+
 ## Download a prebuilt binary from GitHub (recommended)
 
 You can download the prebuilt binary from GitHub with
