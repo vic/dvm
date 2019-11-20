@@ -6,7 +6,7 @@ Fast and simple Deno runtime version manager built with Native Reason.
 
 See the file [INSTALL.md](INSTALL.md) for installation instructions.
 
-## All commands
+## Usage
 
 | Command                 | Effect                                          |
 | ----------------------- | ----------------------------------------------- |
