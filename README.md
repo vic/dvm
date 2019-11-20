@@ -22,6 +22,10 @@ See the file [INSTALL.md](INSTALL.md) for installation instructions.
 | dvm list-all            | List all versions of a Deno runtime.            |
 | dvm init [shell name]   | Print the path to a Deno runtime.               |
 
+| Path              | Effect                                                         |
+| ----------------- | -------------------------------------------------------------- |
+| `DVM_INSTALL_DIR` | You can change the installation directory. (Default: `~/.dvm`) |
+
 ## Bug reports and user feedback
 
 Please report bugs using the issue tracker at
