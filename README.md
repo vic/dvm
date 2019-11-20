@@ -3,7 +3,7 @@
 [![Main workflow](https://github.com/imbsky/dvm/workflows/Main%20workflow/badge.svg)](https://github.com/imbsky/dvm/actions)
 [![GitHub package.json version](https://img.shields.io/github/package-json/v/imbsky/dvm?style=flat-square)](https://github.com/imbsky/dvm/blob/master/package.json)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![GitHub](https://img.shields.io/github/license/imbsky/dvm?color=orange&style=flat-square)](https://github.com/imbsky/dvm/blob/master/LICENSE)
+[![GitHub](https://img.shields.io/github/license/imbsky/dvm?color=brightgreen&style=flat-square)](https://github.com/imbsky/dvm/blob/master/LICENSE)
 
 Fast and simple Deno runtime version manager built with Native Reason.
 
