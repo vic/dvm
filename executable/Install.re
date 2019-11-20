@@ -3,16 +3,15 @@ open Dvm;
 let run = version => {
   let downloadUrl = Util.Install.createDownloadUrl(version);
 
-  let installDir =
-    Filename.concat(Filename.concat(Constant.dvmDir, "installs"), version);
-  let gzipPath = Filename.concat(installDir, "deno.gz");
-  let binaryPath = Filename.concat(installDir, "deno");
+  let installVersionDir = Filename.concat(Constant.installDir, version);
+  let gzipPath = Filename.concat(installVersionDir, "deno.gz");
+  let binaryPath = Filename.concat(installVersionDir, "deno");
 
   if (!Sys.file_exists(Constant.dvmDir)) {
     Core.Unix.mkdir_p(Constant.dvmDir);
   };
 
-  if (Sys.file_exists(installDir)) {
+  if (Sys.file_exists(installVersionDir)) {
     Console.log(
       <Pastel>
         "Deno runtime version "
@@ -23,7 +22,7 @@ let run = version => {
     exit(1);
   };
 
-  Core.Unix.mkdir_p(installDir);
+  Core.Unix.mkdir_p(installVersionDir);
   Core_kernel.Out_channel.write_all(
     gzipPath,
     ~data=Http.Curl.get(downloadUrl),

@@ -1,10 +1,9 @@
 open Dvm;
 
 let run = version => {
-  let installDir =
-    Filename.concat(Filename.concat(Constant.dvmDir, "installs"), version);
+  let installVersionDir = Filename.concat(Constant.installDir, version);
 
-  if (!Sys.file_exists(installDir)) {
+  if (!Sys.file_exists(installVersionDir)) {
     Console.log(
       <Pastel>
         "Deno runtime version "
@@ -15,7 +14,7 @@ let run = version => {
     exit(1);
   };
 
-  System.rmrf(installDir);
+  System.rmrf(installVersionDir);
 
   Console.log(
     <Pastel>

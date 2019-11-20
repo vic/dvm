@@ -1,14 +1,12 @@
 open Dvm;
 
 let run = version => {
-  let installDir =
-    Filename.concat(Filename.concat(Constant.dvmDir, "installs"), version);
-  let binaryPath = Filename.concat(installDir, "deno");
-  let currentDir = Filename.concat(Constant.dvmDir, "current");
-  let currentBinaryPath = Filename.concat(currentDir, "deno");
+  let installVersionDir = Filename.concat(Constant.installDir, version);
+  let binaryPath = Filename.concat(installVersionDir, "deno");
+  let currentBinaryPath = Filename.concat(Constant.currentDir, "deno");
 
-  if (!Sys.file_exists(currentDir)) {
-    Core.Unix.mkdir_p(currentDir);
+  if (!Sys.file_exists(Constant.currentDir)) {
+    Core.Unix.mkdir_p(Constant.currentDir);
   };
 
   if (Sys.file_exists(currentBinaryPath)) {
