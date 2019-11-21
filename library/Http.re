@@ -5,7 +5,7 @@ module Curl = {
   };
 
   let init_conn = url => {
-    let buffer = Buffer.create(1024)
+    let buffer = Buffer.create(4096)
     and connection = Curl.init();
     Curl.set_post(connection, false);
     Curl.set_sslverifyhost(connection, Curl.SSLVERIFYHOST_EXISTENCE);
