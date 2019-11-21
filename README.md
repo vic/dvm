@@ -37,7 +37,7 @@ See the file [INSTALL.md](INSTALL.md) for installation instructions.
 
 ## Benchmark
 
-### dvm
+### DVM
 
 | Command                                          |  Mean [ms] | Min [ms] | Max [ms] | Relative |
 | :----------------------------------------------- | ---------: | -------: | -------: | -------: |
