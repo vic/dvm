@@ -26,6 +26,26 @@ See the file [INSTALL.md](INSTALL.md) for installation instructions.
 | ----------------- | -------------------------------------------------------------- |
 | `DVM_INSTALL_DIR` | You can change the installation directory. (Default: `~/.dvm`) |
 
+## Benchmark
+
+### dvm
+
+| Command          | Mean [ms] | Min [ms] | Max [ms] | Relative |
+| :--------------- | --------: | -------: | -------: | -------: |
+| `deno --version` | 4.8 ± 0.6 |      4.1 |      8.4 |     1.00 |
+
+### Official Deno Binary Installer
+
+| Command          | Mean [ms] | Min [ms] | Max [ms] | Relative |
+| :--------------- | --------: | -------: | -------: | -------: |
+| `deno --version` | 5.1 ± 0.5 |      4.4 |      7.4 |     1.00 |
+
+### asdf-deno
+
+| Command          |     Mean [ms] | Min [ms] | Max [ms] | Relative |
+| :--------------- | ------------: | -------: | -------: | -------: |
+| `deno --version` | 204.1 ± 127.7 |    159.2 |    567.4 |     1.00 |
+
 ## Bug reports and user feedback
 
 Please report bugs using the issue tracker at
