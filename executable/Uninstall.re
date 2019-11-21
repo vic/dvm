@@ -2,6 +2,8 @@ open Dvm;
 
 let run = version => {
   let installVersionDir = Filename.concat(Constant.installDir, version);
+  let binaryPath = Filename.concat(installVersionDir, "deno");
+  let currentBinaryPath = Filename.concat(Constant.currentDir, "deno");
 
   if (!Sys.file_exists(installVersionDir)) {
     Console.log(
@@ -12,6 +14,10 @@ let run = version => {
       </Pastel>,
     );
     exit(1);
+  };
+
+  if (Unix.readlink(currentBinaryPath) == binaryPath) {
+    Core.Unix.unlink(currentBinaryPath);
   };
 
   System.rmrf(installVersionDir);
