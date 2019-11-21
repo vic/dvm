@@ -55,5 +55,5 @@ Please report bugs using the issue tracker at
 
 ## License
 
-&copy; Contributors Licensed under the
+Licensed under the
 [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0).
