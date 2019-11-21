@@ -16,8 +16,10 @@ let run = version => {
     exit(1);
   };
 
-  if (Unix.readlink(currentBinaryPath) == binaryPath) {
-    Core.Unix.unlink(currentBinaryPath);
+  if (Sys.file_exists(currentBinaryPath)) {
+    if (Unix.readlink(currentBinaryPath) == binaryPath) {
+      Core.Unix.unlink(currentBinaryPath);
+    };
   };
 
   System.rmrf(installVersionDir);
