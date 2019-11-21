@@ -11,4 +11,4 @@
  limitations under the License.
  */
 
-let version = "0.1.0";
+let version = "1.0.0";
