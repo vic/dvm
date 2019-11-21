@@ -35,7 +35,7 @@ jobs:
         run: esy build
 
       - name: Copy and rename binary
-        run: bash scripts/copy-static-binary.sh
+        run: bash scripts/copy-binary.sh
 
       - name: Upload binary to artifact
         uses: actions/upload-artifact@v1

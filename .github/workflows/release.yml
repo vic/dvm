@@ -38,7 +38,7 @@ jobs:
         run: esy build
 
       - name: Copy and rename binary
-        run: bash scripts/copy-static-binary.sh
+        run: bash scripts/copy-binary.sh
 
       - name: Prepare release asset
         run: tar -zcvf dvm-x86_64-${{ matrix.os }}.tar.gz dvm

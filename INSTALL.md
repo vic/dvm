@@ -92,6 +92,6 @@ esy build
 You can install dvm with
 
 ```console
-bash scripts/copy-static-binary.sh
+bash scripts/copy-binary.sh
 sudo install dvm /usr/local/bin/dvm
 ```
