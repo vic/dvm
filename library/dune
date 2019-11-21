@@ -7,6 +7,5 @@
    (name Dvm)
    ; Other libraries list this name in their package.json 'require' field to use this library.
    (public_name dvm.lib)
-   (libraries  console.lib core_kernel core curl pastel.lib ppx_deriving_yojson.runtime )
-   (preprocess ( pps ppx_deriving_yojson ))  ; From package.json preprocess field
+   (libraries  console.lib core_kernel core curl pastel.lib )
 )

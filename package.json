@@ -28,23 +28,19 @@
         "dvm.lib",
         "ezgzip",
         "pastel.lib",
-        "rresult"
+        "rresult",
+        "yojson"
       ]
     },
     "library": {
       "name": "dvm.lib",
       "namespace": "Dvm",
-      "preprocess": [
-        "pps",
-        "ppx_deriving_yojson"
-      ],
       "require": [
         "console.lib",
         "core_kernel",
         "core",
         "curl",
-        "pastel.lib",
-        "ppx_deriving_yojson.runtime"
+        "pastel.lib"
       ]
     }
   },
@@ -57,7 +53,6 @@
     "@opam/core_kernel": "v0.12.3",
     "@opam/ezgzip": "0.2.3",
     "@opam/ocurl": "0.9.0",
-    "@opam/ppx_deriving_yojson": "3.5.1",
     "@opam/rresult": "0.6.0",
     "@opam/yojson": "1.7.0",
     "@reason-native/console": "0.1.0",
