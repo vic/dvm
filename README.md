@@ -13,7 +13,7 @@ See the file [INSTALL.md](INSTALL.md) for installation instructions.
 
 ## Usage
 
-| Command                 | Effect                                          |
+| Command                 | Description                                     |
 | ----------------------- | ----------------------------------------------- |
 | dvm install [version]   | Install a specific version of a Deno runtime.   |
 | dvm uninstall [version] | Uninstall a specific version of a Deno runtime. |
@@ -22,9 +22,9 @@ See the file [INSTALL.md](INSTALL.md) for installation instructions.
 | dvm ls-remote           | List all remote versions of a Deno runtime.     |
 | dvm init [shell name]   | Print the path to a Deno runtime.               |
 
-| Path              | Effect                                                         |
-| ----------------- | -------------------------------------------------------------- |
-| `DVM_INSTALL_DIR` | You can change the installation directory. (Default: `~/.dvm`) |
+| Variable          | Default  | Description                                |
+| ----------------- | -------- | ------------------------------------------ |
+| `DVM_INSTALL_DIR` | `~/.dvm` | You can change the installation directory. |
 
 ## Benchmark
 
