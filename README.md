@@ -11,9 +11,9 @@ Many version managers must redetermine which version to use each time they run.
 Even if you have not changed the version. This happens in all runs, and you
 might experience a certain slowdown while the version manager is searching for
 versions because the version manager must traverse the directories to search for
-version files. DVM calls a symbolic link to executable in the PATH. The version
-resolution is out of the way and is faster. Commands that try to find themselves
-in the PATH find the expected location. And you don't need any extra
+version files. DVM calls a symbolic link directly to executable in the PATH. The
+version resolution is out of the way and is faster. Commands that try to find
+themselves in the PATH find the expected location. And you don't need any extra
 dependencies, you can use it right away.
 
 ## Installation
