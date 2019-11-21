@@ -36,7 +36,7 @@ See the file [INSTALL.md](INSTALL.md) for installation instructions.
 
 ### Official installer
 
-##### **This does not support version management.**
+##### **This does NOT support version management.**
 
 | Command          | Mean [ms] | Min [ms] | Max [ms] | Relative |
 | :--------------- | --------: | -------: | -------: | -------: |
