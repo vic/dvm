@@ -25,6 +25,8 @@
       "require": [
         "cmdliner",
         "console.lib",
+        "core",
+        "core_kernel",
         "dvm.lib",
         "ezgzip",
         "pastel.lib",
@@ -37,7 +39,6 @@
       "namespace": "Dvm",
       "require": [
         "console.lib",
-        "core_kernel",
         "core",
         "curl",
         "pastel.lib"
