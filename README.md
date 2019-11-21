@@ -30,23 +30,23 @@ See the file [INSTALL.md](INSTALL.md) for installation instructions.
 
 ### dvm
 
-| Command          | Mean [ms] | Min [ms] | Max [ms] | Relative |
-| :--------------- | --------: | -------: | -------: | -------: |
-| `deno --version` | 4.8 ± 0.6 |      4.1 |      8.4 |     1.00 |
+| Command                                          |  Mean [ms] | Min [ms] | Max [ms] | Relative |
+| :----------------------------------------------- | ---------: | -------: | -------: | -------: |
+| `deno https://deno.land/std/examples/welcome.ts` | 15.7 ± 0.5 |     13.5 |     16.6 |     1.00 |
 
 ### Official installer
 
 ##### **This does NOT support version management.**
 
-| Command          | Mean [ms] | Min [ms] | Max [ms] | Relative |
-| :--------------- | --------: | -------: | -------: | -------: |
-| `deno --version` | 5.1 ± 0.5 |      4.4 |      7.4 |     1.00 |
+| Command                                          |  Mean [ms] | Min [ms] | Max [ms] | Relative |
+| :----------------------------------------------- | ---------: | -------: | -------: | -------: |
+| `deno https://deno.land/std/examples/welcome.ts` | 15.8 ± 0.5 |     14.4 |     17.1 |     1.00 |
 
 ### asdf-deno
 
-| Command          |     Mean [ms] | Min [ms] | Max [ms] | Relative |
-| :--------------- | ------------: | -------: | -------: | -------: |
-| `deno --version` | 204.1 ± 127.7 |    159.2 |    567.4 |     1.00 |
+| Command                                          |     Mean [ms] | Min [ms] | Max [ms] | Relative |
+| :----------------------------------------------- | ------------: | -------: | -------: | -------: |
+| `deno https://deno.land/std/examples/welcome.ts` | 195.5 ± 170.0 |    137.3 |    679.1 |     1.00 |
 
 ## Bug reports and user feedback
 
