@@ -23,7 +23,7 @@ let run = version => {
   Core.Unix.mkdir_p(installVersionDir);
   Core_kernel.Out_channel.write_all(
     binaryPath,
-    ~data=Rresult.R.get_ok(Ezgzip.decompress(Http.Curl.get(downloadUrl))),
+    ~data=Rresult.R.get_ok(Http.Curl.get(downloadUrl) |> Ezgzip.decompress),
   );
 
   Core.Unix.chmod(binaryPath, ~perm=755);
