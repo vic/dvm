@@ -93,7 +93,7 @@
       },
       "overrides": [],
       "dependencies": [
-        "@reason-native/pastel@0.2.2@d41d8cd9",
+        "refmterr@3.2.2@d41d8cd9", "@reason-native/pastel@0.2.2@d41d8cd9",
         "@reason-native/console@0.1.0@d41d8cd9",
         "@opam/yojson@opam:1.7.0@7056d985",
         "@opam/rresult@opam:0.6.0@4b185e72",
@@ -105,9 +105,8 @@
         "@opam/cmdliner@opam:1.0.4@93208aac"
       ],
       "devDependencies": [
-        "refmterr@3.2.2@d41d8cd9", "pesy@0.4.4@d41d8cd9",
-        "ocaml@4.8.1000@d41d8cd9", "@opam/merlin@opam:3.3.2@7a364181",
-        "@opam/dune@opam:1.11.4@21d66ccd"
+        "pesy@0.4.4@d41d8cd9", "ocaml@4.8.1000@d41d8cd9",
+        "@opam/merlin@opam:3.3.2@7a364181", "@opam/dune@opam:1.11.4@21d66ccd"
       ]
     },
     "@reason-native/pastel@0.2.2@d41d8cd9": {
