@@ -21,8 +21,8 @@ let default = {
 module Commands = {
   let init = shell => Init.run(shell);
   let install = version => Install.run(version);
-  let list = () => List.run();
-  let listAll = () => ListAll.run();
+  let ls_remote = () => Ls_remote.run();
+  let ls = () => Ls.run();
   let uninstall = version => Uninstall.run(version);
   let use = version => Use.run(version);
 };
@@ -54,22 +54,22 @@ let install = {
   );
 };
 
-let list = {
+let ls_remote = {
   Cmdliner.Term.(
-    app(const(Commands.list), const()),
+    app(const(Commands.ls_remote), const()),
     Cmdliner.Term.info(
-      "list",
-      ~doc="List installed versions of a Deno runtime.",
+      "ls-remote",
+      ~doc="List all remote versions of a Deno runtime.",
     ),
   );
 };
 
-let listAll = {
+let ls = {
   Cmdliner.Term.(
-    app(const(Commands.listAll), const()),
+    app(const(Commands.ls), const()),
     Cmdliner.Term.info(
-      "list-all",
-      ~doc="List all versions of a Deno runtime.",
+      "ls",
+      ~doc="List installed versions of a Deno runtime.",
     ),
   );
 };
@@ -112,6 +112,6 @@ let use = {
 let _ =
   Cmdliner.Term.eval_choice(
     default,
-    [init, install, list, listAll, uninstall, use],
+    [init, install, ls_remote, ls, uninstall, use],
   )
   |> Cmdliner.Term.exit;
