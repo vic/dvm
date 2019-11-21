@@ -2,4 +2,4 @@ open Dvm;
 
 let run = () =>
   Http.Curl.get("https://api.github.com/repos/denoland/deno/releases")
-  |> Util.ListAll.parse;
+  |> Json.ListAll.parse;
