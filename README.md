@@ -1,4 +1,4 @@
-# dvm
+# DVM
 
 [![Main workflow](https://github.com/imbsky/dvm/workflows/Main%20workflow/badge.svg)](https://github.com/imbsky/dvm/actions)
 [![GitHub package.json version](https://img.shields.io/github/package-json/v/imbsky/dvm?style=flat-square)](https://github.com/imbsky/dvm/blob/master/package.json)
