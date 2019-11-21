@@ -3,7 +3,6 @@ open Dvm;
 let run = version => {
   let downloadUrl = Util.Install.createDownloadUrl(version);
   let installVersionDir = Filename.concat(Constant.installDir, version);
-  let gzipPath = Filename.concat(installVersionDir, "deno.gz");
   let binaryPath = Filename.concat(installVersionDir, "deno");
 
   if (!Sys.file_exists(Constant.dvmDir)) {
@@ -23,11 +22,10 @@ let run = version => {
 
   Core.Unix.mkdir_p(installVersionDir);
   Core_kernel.Out_channel.write_all(
-    gzipPath,
-    ~data=Http.Curl.get(downloadUrl),
+    binaryPath,
+    ~data=Rresult.R.get_ok(Ezgzip.decompress(Http.Curl.get(downloadUrl))),
   );
 
-  let _ = Sys.command("gunzip " ++ gzipPath);
   Core.Unix.chmod(binaryPath, ~perm=755);
 
   Console.log(

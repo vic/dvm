@@ -26,7 +26,9 @@
         "cmdliner",
         "console.lib",
         "dvm.lib",
-        "pastel.lib"
+        "ezgzip",
+        "pastel.lib",
+        "rresult"
       ]
     },
     "library": {
@@ -53,8 +55,11 @@
     "@opam/cmdliner": "1.0.4",
     "@opam/core": "v0.12.4",
     "@opam/core_kernel": "v0.12.3",
+    "@opam/ezgzip": "0.2.3",
+    "@opam/num": "1.2",
     "@opam/ocurl": "0.9.0",
     "@opam/ppx_deriving_yojson": "3.5.1",
+    "@opam/rresult": "0.6.0",
     "@opam/yojson": "1.7.0",
     "@reason-native/console": "0.1.0",
     "@reason-native/pastel": "0.2.2"
