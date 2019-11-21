@@ -34,7 +34,9 @@ See the file [INSTALL.md](INSTALL.md) for installation instructions.
 | :--------------- | --------: | -------: | -------: | -------: |
 | `deno --version` | 4.8 ± 0.6 |      4.1 |      8.4 |     1.00 |
 
-### Official Deno Binary Installer
+### Official installer
+
+##### **This does not support version management.**
 
 | Command          | Mean [ms] | Min [ms] | Max [ms] | Relative |
 | :--------------- | --------: | -------: | -------: | -------: |
