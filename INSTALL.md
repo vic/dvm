@@ -5,7 +5,7 @@ source.
 
 ## Homebrew (recommended for macOS users)
 
-```console
+```bash
 brew install imbsky/tap/dvm
 ```
 
@@ -15,13 +15,13 @@ You can download the prebuilt binary from GitHub with
 
 ##### Linux
 
-```console
+```bash
 curl -sL https://github.com/imbsky/dvm/releases/latest/download/dvm-x86_64-ubuntu-latest.tar.gz -o dvm-x86_64-ubuntu-latest.tar.gz
 ```
 
 ##### macOS
 
-```console
+```bash
 curl -sL https://github.com/imbsky/dvm/releases/latest/download/dvm-x86_64-macOS-latest.tar.gz -o dvm-x86_64-macOS-latest.tar.gz
 ```
 
@@ -29,19 +29,19 @@ You can unzip the zip file with
 
 ##### Linux
 
-```console
+```bash
 tar zxf dvm-x86_64-ubuntu-latest.tar.gz
 ```
 
 ##### macOS
 
-```console
+```bash
 tar zxf dvm-x86_64-macOS-latest.tar.gz
 ```
 
 You can install DVM with
 
-```console
+```bash
 sudo install dvm /usr/local/bin/dvm
 ```
 
@@ -72,26 +72,26 @@ asdf to manage our esy versions. You can get asdf via Git or Homebrew.)
 
 You can clone the source from GitHub with
 
-```console
+```bash
 git clone https://github.com/imbsky/dvm.git
 ```
 
 You can complete the setup of your development environment with
 
-```console
+```bash
 cd dvm
 esy
 ```
 
 You can build dvm with
 
-```console
+```bash
 esy build
 ```
 
 You can install dvm with
 
-```console
+```bash
 bash scripts/copy-binary.sh
 sudo install dvm /usr/local/bin/dvm
 ```
