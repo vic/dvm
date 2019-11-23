@@ -20,8 +20,9 @@ let rec rmrf = path =>
     }
     : Sys.remove(path);
 
-let sysname = Core.Unix.Utsname.sysname(Core.Unix.uname());
-let machine = Core.Unix.Utsname.machine(Core.Unix.uname());
+let uname = Core.Unix.uname();
+let sysname = Core.Unix.Utsname.sysname(uname);
+let machine = Core.Unix.Utsname.machine(uname);
 
 let os =
   switch (sysname) {
