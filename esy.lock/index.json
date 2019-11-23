@@ -1,5 +1,5 @@
 {
-  "checksum": "9e2e2d362f7275fa2cef0e0d616ef83e",
+  "checksum": "ebe1b123f794b2b2cd8c841d1d242b6c",
   "root": "dvm@link-dev:./package.json",
   "node": {
     "yarn-pkg-config@github:esy-ocaml/yarn-pkg-config#cca65f99674ed2d954d28788edeb8c57fada5ed0@d41d8cd9": {
@@ -105,7 +105,8 @@
       ],
       "devDependencies": [
         "pesy@0.4.4@d41d8cd9", "ocaml@4.8.1000@d41d8cd9",
-        "@opam/merlin@opam:3.3.2@7a364181", "@opam/dune@opam:1.11.4@21d66ccd"
+        "@opam/merlin@opam:3.3.2@7a364181",
+        "@opam/dune@opam:1.11.4@21d66ccd", "@esy-ocaml/reason@3.5.2@d41d8cd9"
       ]
     },
     "@reason-native/pastel@0.2.2@d41d8cd9": {
