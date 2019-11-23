@@ -1,7 +1,7 @@
 {
   "name": "dvm",
   "version": "1.0.0",
-  "description": "Fast and simple Deno version manager, built-in Native Reason",
+  "description": "Fast and simple Deno runtime version manager built with Native Reason",
   "repository": "https://github.com/imbsky/dvm",
   "author": "BSKY <me@bsky.moe>",
   "license": "Apache-2.0",
