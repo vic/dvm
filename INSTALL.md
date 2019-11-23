@@ -86,7 +86,7 @@ esy
 You can build dvm with
 
 ```bash
-esy build
+esy release
 ```
 
 You can install dvm with

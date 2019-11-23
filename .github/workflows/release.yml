@@ -34,8 +34,8 @@ jobs:
         if: steps.esy.outputs.cache-hit != 'true'
         run: esy
 
-      - name: Compile Reason to binary
-        run: esy build
+      - name: Build
+        run: esy release
 
       - name: Copy and rename binary
         run: bash scripts/copy-binary.sh
