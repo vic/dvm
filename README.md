@@ -1,4 +1,4 @@
-# DVM
+# dvm
 
 [![Main workflow](https://github.com/imbsky/dvm/workflows/Main%20workflow/badge.svg)](https://github.com/imbsky/dvm/actions)
 [![GitHub package.json version](https://img.shields.io/github/package-json/v/imbsky/dvm?style=flat-square)](https://github.com/imbsky/dvm/blob/master/package.json)
@@ -7,14 +7,16 @@
 
 ## Overview
 
-Many version managers must redetermine which version to use each time they run.
-Even if you have not changed the version. This happens in all runs, and you
-might experience a certain slowdown while the version manager is searching for
-versions because the version manager must traverse the directories to search for
-version files. DVM calls a symbolic link directly to executable in the PATH. The
-version resolution is out of the way and is faster. Commands that try to find
-themselves in the PATH find the expected location. And you don't need any extra
-dependencies, you can use it right away.
+Fast and simple Deno runtime version manager built with Native Reason, inspired
+by [fnm](https://github.com/Schniz/fnm). Many version managers must redetermine
+which version to use each time they run. Even if you have not changed the
+version. This happens in all runs, and you might experience a certain slowdown
+while the version manager is searching for versions because the version manager
+must traverse the directories to search for version files. dvm calls a symbolic
+link directly to executable in the PATH. The version resolution is out of the
+way and is faster. Commands that try to find themselves in the PATH find the
+expected location. And you don't need any extra dependencies, you can use it
+right away.
 
 ## Installation
 
@@ -37,7 +39,7 @@ See the file [INSTALL.md](INSTALL.md) for installation instructions.
 
 ## Benchmark
 
-### DVM
+### dvm
 
 | Command                                          |  Mean [ms] | Min [ms] | Max [ms] | Relative |
 | :----------------------------------------------- | ---------: | -------: | -------: | -------: |

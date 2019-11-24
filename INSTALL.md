@@ -39,7 +39,7 @@ tar zxf dvm-x86_64-ubuntu-latest.tar.gz
 tar zxf dvm-x86_64-macOS-latest.tar.gz
 ```
 
-You can install DVM with
+You can install dvm with
 
 ```bash
 sudo install dvm /usr/local/bin/dvm
@@ -65,7 +65,7 @@ dvm init fish | source
 
 #### esy
 
-Before we can build DVM, we need to make sure that we have a latest esy. (We use
+Before we can build dvm, we need to make sure that we have a latest esy. (We use
 asdf to manage our esy versions. You can get asdf via Git or Homebrew.)
 
 ### Getting the source
