@@ -49,21 +49,21 @@
     "fmt": "bash -c 'esy refmt --parse=re --in-place **/*.re'"
   },
   "dependencies": {
+    "@esy-ocaml/reason": "3.5.2",
     "@opam/cmdliner": "1.0.4",
     "@opam/core": "v0.12.4",
     "@opam/core_kernel": "v0.12.3",
+    "@opam/dune": "2.0.0",
     "@opam/ezgzip": "0.2.3",
     "@opam/ocurl": "0.9.0",
     "@opam/rresult": "0.6.0",
     "@opam/yojson": "1.7.0",
     "@reason-native/console": "0.1.0",
-    "@reason-native/pastel": "0.2.2"
+    "@reason-native/pastel": "0.2.2",
+    "ocaml": "4.8.1000"
   },
   "devDependencies": {
-    "@esy-ocaml/reason": "3.5.2",
-    "@opam/dune": "2.0.0",
     "@opam/merlin": "3.3.2",
-    "ocaml": "4.8.1000",
     "pesy": "0.4.4"
   }
 }
