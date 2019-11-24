@@ -7,7 +7,7 @@
   "license": "Apache-2.0",
   "private": true,
   "esy": {
-    "build": "refmterr dune build",
+    "build": "dune build",
     "release": {
       "releasedBinaries": [
         "dvm.exe"
@@ -57,12 +57,11 @@
     "@opam/rresult": "0.6.0",
     "@opam/yojson": "1.7.0",
     "@reason-native/console": "0.1.0",
-    "@reason-native/pastel": "0.2.2",
-    "refmterr": "3.2.2"
+    "@reason-native/pastel": "0.2.2"
   },
   "devDependencies": {
     "@esy-ocaml/reason": "3.5.2",
-    "@opam/dune": "1.11.4",
+    "@opam/dune": "2.0.0",
     "@opam/merlin": "3.3.2",
     "ocaml": "4.8.1000",
     "pesy": "0.4.4"

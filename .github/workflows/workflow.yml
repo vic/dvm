@@ -30,14 +30,13 @@ jobs:
         run: npm install --global esy
 
       - name: Install and build OCaml packages
-        if: steps.esy.outputs.cache-hit != 'true'
         run: esy
 
       - name: Build
-        run: esy release
+        run: esy build
 
       - name: Copy and rename binary
-        run: bash scripts/copy-binary.sh
+        run: cp _esy/default/build/default/executable/Index.exe ./dvm
 
       - name: Upload binary to artifact
         uses: actions/upload-artifact@v1
