@@ -1,2 +1,2 @@
-(lang dune 1.6)
- (name dvm)
+(lang dune 2.0)
+(name dvm)

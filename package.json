@@ -7,41 +7,10 @@
   "license": "Apache-2.0",
   "private": true,
   "esy": {
-    "build": "dune build",
+    "build": "dune build -p #{self.name}",
     "release": {
       "releasedBinaries": [
         "dvm.exe"
-      ]
-    }
-  },
-  "buildDirs": {
-    "executable": {
-      "name": "dvm.exe",
-      "main": "Index",
-      "modes": [
-        "native",
-        "exe"
-      ],
-      "require": [
-        "cmdliner",
-        "console.lib",
-        "core",
-        "core_kernel",
-        "dvm.lib",
-        "ezgzip",
-        "pastel.lib",
-        "rresult",
-        "yojson"
-      ]
-    },
-    "library": {
-      "name": "dvm.lib",
-      "namespace": "Dvm",
-      "require": [
-        "console.lib",
-        "core",
-        "curl",
-        "pastel.lib"
       ]
     }
   },
@@ -63,7 +32,6 @@
     "ocaml": "4.8.1000"
   },
   "devDependencies": {
-    "@opam/merlin": "3.3.2",
-    "pesy": "0.4.4"
+    "@opam/merlin": "3.3.2"
   }
 }
