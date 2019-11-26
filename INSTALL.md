@@ -86,12 +86,12 @@ esy
 You can build dvm with
 
 ```bash
-esy release
+esy build
 ```
 
 You can install dvm with
 
 ```bash
-bash scripts/copy-binary.sh
+cp _esy/default/build/default/executable/Index.exe ./dvm
 sudo install dvm /usr/local/bin/dvm
 ```
