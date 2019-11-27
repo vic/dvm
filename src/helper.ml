@@ -1,3 +1,5 @@
+let decorateString version = "* " ^ version
+
 let rec rmrf path =
   match Sys.is_directory path with
   | true ->

@@ -1,5 +1,3 @@
-open Dvm
-
 let decorateString version = "* " ^ version
 
 let run () =

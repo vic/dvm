@@ -1,5 +1,3 @@
-open Dvm
-
 let run version =
   let installVersionDir = Filename.concat Constant.installDir version in
   let binaryPath = Filename.concat installVersionDir "deno" in
@@ -12,6 +10,6 @@ let run version =
   then
     if Unix.readlink currentBinaryPath = binaryPath
     then Core.Unix.unlink currentBinaryPath;
-  System.rmrf installVersionDir;
+  Helper.rmrf installVersionDir;
   print_endline ("Deno runtime version " ^ version ^ " has been uninstalled.")
 ;;

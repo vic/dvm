@@ -1,5 +1,3 @@
-open Dvm
-
 let run version =
   let installVersionDir = Filename.concat Constant.installDir version in
   let binaryPath = Filename.concat installVersionDir "deno" in

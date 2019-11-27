@@ -1,5 +1,3 @@
-open Dvm
-
 let run shell =
   (match shell with
   | "bash" -> "export PATH=" ^ Constant.currentDir ^ ":$" ^ "PATH"

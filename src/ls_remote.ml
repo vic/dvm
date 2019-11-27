@@ -1,5 +1,3 @@
-open Dvm
-
 let decorateString version = "* " ^ version
 let stripQuotes str = String.sub str 2 (String.length str - 3)
 

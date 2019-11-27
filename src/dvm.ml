@@ -1,5 +1,3 @@
-open Dvm
-
 let default =
   ( (let open Cmdliner.Term in
     ret (const (fun _ -> `Help (`Pager, None)) $ const ()))
@@ -12,7 +10,7 @@ let default =
             "Please report bugs using the issue tracker at \
              https://github.com/imbsky/dvm/issues"
         ]
-      ~version:Package_Info.version )
+      ~version:Package_info.version )
 ;;
 
 module Commands = struct

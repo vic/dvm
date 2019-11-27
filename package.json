@@ -10,7 +10,7 @@
     "build": "dune build -p #{self.name}"
   },
   "scripts": {
-    "fmt": "bash -c 'esy ocamlformat --inplace {executable,library}/*.ml'"
+    "fmt": "bash -c 'esy ocamlformat --inplace src/*.ml'"
   },
   "dependencies": {
     "@opam/cmdliner": "1.0.4",

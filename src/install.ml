@@ -1,12 +1,10 @@
-open Dvm
-
 let createDownloadUrl version =
   "https://github.com/denoland/deno/releases/download/v"
   ^ version
   ^ "/deno_"
-  ^ System.os
+  ^ Helper.os
   ^ "_"
-  ^ System.arch
+  ^ Helper.arch
   ^ ".gz"
 ;;
 
