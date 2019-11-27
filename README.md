@@ -7,7 +7,7 @@
 
 ## Overview
 
-Fast and simple Deno runtime version manager built with Native Reason, inspired
+Fast and simple Deno runtime version manager built with OCaml, inspired
 by [fnm](https://github.com/Schniz/fnm). Many version managers must redetermine
 which version to use each time they run. Even if you have not changed the
 version. This happens in all runs, and you might experience a certain slowdown

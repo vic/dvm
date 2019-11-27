@@ -1,7 +1,6 @@
 (executable
  (name Index)
  (public_name dvm.exe)
- (libraries cmdliner console.lib core core_kernel dvm.lib ezgzip pastel.lib
-   rresult yojson)
+ (libraries cmdliner core core_kernel dvm.lib ezgzip rresult yojson)
  (modes
   (native exe)))

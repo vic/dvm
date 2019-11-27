@@ -1,4 +1,4 @@
 (library
  (name Dvm)
  (public_name dvm.lib)
- (libraries console.lib core curl pastel.lib))
+ (libraries core curl))
