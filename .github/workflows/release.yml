@@ -7,6 +7,8 @@ on:
 
 jobs:
   release:
+    if: github.repository == 'imbsky/dvm'
+
     strategy:
       matrix:
         os: [ubuntu-latest, macOS-latest]
