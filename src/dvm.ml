@@ -3,7 +3,7 @@ let default =
     ret (const (fun _ -> `Help (`Pager, None)) $ const ()))
   , Cmdliner.Term.info
       "dvm"
-      ~doc:"Fast and simple Deno runtime version manager built with OCaml."
+      ~doc:"Fast and simple Deno runtime version manager written in OCaml."
       ~man:
         [ `S Cmdliner.Manpage.s_bugs
         ; `P
