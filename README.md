@@ -62,7 +62,7 @@ See the file [INSTALL.md](INSTALL.md) for installation instructions.
 ## Bug reports and user feedback
 
 Please report bugs using the issue tracker at
-<https://github.com/imbsky/dvm/issues>
+<https://github.com/imbsky/dvm/issues>.
 
 ## License
 
