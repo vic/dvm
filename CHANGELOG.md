@@ -2,11 +2,9 @@
 
 ## 1.1.0 - Unreleased
 
-### Changed
+### Packaging
 
-- Rewritten in OCaml.
-
-- Coloring of console output has been removed.
+- OCaml version has been bumped to 4.09.0.
 
 ## [1.0.0](https://github.com/imbsky/dvm/releases/tag/v1.0.0) - 2019-11-22
 

@@ -44,7 +44,7 @@ jobs:
         run: esy build
 
       - name: Copy and rename binary
-        run: cp _esy/default/build/default/src/dvm.exe ./dvm
+        run: cp _esy/default/build/default/executable/Index.exe ./dvm
 
       - name: Upload binary to artifact
         uses: actions/upload-artifact@v1

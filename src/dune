@@ -1,6 +1,0 @@
-(executable
- (name dvm)
- (public_name dvm.exe)
- (libraries cmdliner core core_kernel curl ezgzip rresult yojson)
- (modes
-  (native exe)))
