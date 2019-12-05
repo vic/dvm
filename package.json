@@ -6,7 +6,7 @@
   "author": "BSKY <me@bsky.moe>",
   "license": "Apache-2.0",
   "esy": {
-    "build": "dune build -p #{self.name}"
+    "build": "dune build --root . --only-packages #{self.name} --ignore-promoted-rules --no-config"
   },
   "scripts": {
     "fmt": "bash -c 'esy refmt --parse=re --in-place **/*.re'"
