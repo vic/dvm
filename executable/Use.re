@@ -22,7 +22,7 @@ let run = version => {
     Console.log(
       <Pastel>
         "Deno runtime version "
-        <Pastel color=Pastel.Red underline=true> version </Pastel>
+        <Pastel color=Pastel.Cyan underline=true> version </Pastel>
         " does not exist."
       </Pastel>,
     );
