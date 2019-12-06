@@ -6,6 +6,10 @@
 
 - OCaml version has been bumped to 4.09.0.
 
+### Changed
+
+- Change all pastel colors to cyan.
+
 ## [1.0.0](https://github.com/imbsky/dvm/releases/tag/v1.0.0) - 2019-11-22
 
 ### Added
