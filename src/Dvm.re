@@ -11,8 +11,6 @@
  limitations under the License.
  */
 
-open Dvm;
-
 let default = {
   (
     Cmdliner.Term.(ret(const(_ => `Help((`Pager, None))) $ const())),

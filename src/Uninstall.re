@@ -11,8 +11,6 @@
  limitations under the License.
  */
 
-open Dvm;
-
 let run = version => {
   let installVersionDir = Filename.concat(Constant.installDir, version);
   let binaryPath = Filename.concat(installVersionDir, "deno");

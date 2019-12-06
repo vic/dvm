@@ -11,32 +11,16 @@
  limitations under the License.
  */
 
-open Dvm;
-
 let decorateString = version => {
   <Pastel> <Pastel color=Pastel.Cyan> "* " </Pastel> version </Pastel>;
 };
 
-let stripQuotes = str => {
-  String.sub(str, 2, String.length(str) - 3);
-};
+let run = () => {
+  if (!Sys.file_exists(Constant.installDir)) {
+    Core.Unix.mkdir_p(Constant.installDir);
+  };
 
-let jsonParse = body => {
-  body
-  |> Yojson.Safe.from_string
-  |> Yojson.Safe.Util.map(obj => obj |> Yojson.Safe.Util.member("name"))
-  |> Yojson.Safe.Util.to_list
+  Core.Sys.ls_dir(Constant.installDir)
   |> List.rev
-  |> List.iter(ver =>
-       ver
-       |> Yojson.Safe.to_basic
-       |> Yojson.Basic.to_string
-       |> stripQuotes
-       |> decorateString
-       |> Console.log
-     );
+  |> List.iter(ver => ver |> decorateString |> Console.log);
 };
-
-let run = () =>
-  Http.Curl.get("https://api.github.com/repos/denoland/deno/tags")
-  |> jsonParse;

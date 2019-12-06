@@ -1,0 +1,7 @@
+(executable
+ (name Dvm)
+ (public_name dvm)
+ (libraries cmdliner console.lib core core_kernel curl ezgzip pastel.lib rresult
+   yojson)
+ (modes
+  (native exe)))

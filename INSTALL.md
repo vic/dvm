@@ -92,6 +92,6 @@ esy build
 You can install dvm with
 
 ```bash
-cp _esy/default/build/default/executable/Index.exe ./dvm
+cp _esy/default/build/default/src/Dvm.exe ./dvm
 sudo install dvm /usr/local/bin/dvm
 ```

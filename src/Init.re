@@ -11,8 +11,6 @@
  limitations under the License.
  */
 
-open Dvm;
-
 let run = shell => {
   (
     switch (shell) {

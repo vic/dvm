@@ -11,8 +11,6 @@
  limitations under the License.
  */
 
-open Dvm;
-
 let createDownloadUrl = version =>
   "https://github.com/denoland/deno/releases/download/v"
   ++ version
