@@ -9,7 +9,8 @@
     "build": "dune build --root . --only-packages #{self.name} --ignore-promoted-rules --no-config"
   },
   "scripts": {
-    "fmt": "bash -c 'esy refmt --parse=re --in-place **/*.re'"
+    "refmt": "bash -c 'esy refmt --parse=re --in-place **/*.re'",
+    "prettier": "bash -c 'prettier --write **/*.{json,md,yml}'"
   },
   "dependencies": {
     "@esy-ocaml/reason": "3.5.2",
@@ -26,6 +27,7 @@
     "ocaml": "4.09.0"
   },
   "devDependencies": {
-    "@opam/merlin": "3.3.3"
+    "@opam/merlin": "3.3.3",
+    "prettier": "1.19.1"
   }
 }

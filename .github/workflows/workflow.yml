@@ -35,6 +35,7 @@ jobs:
         uses: actions/cache@v1
         with:
           path: ~/.esy
+          # prettier-ignore
           key: ${{ runner.os }}-esy-${{ hashFiles(format('{0}{1}', github.workspace, '/esy.lock/index.json')) }}
 
       - name: Install and build OCaml packages
