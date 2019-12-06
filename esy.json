@@ -27,6 +27,7 @@
     "ocaml": "4.09.0"
   },
   "devDependencies": {
-    "@opam/merlin": "3.3.3"
+    "@opam/merlin": "3.3.3",
+    "prettier": "1.19.1"
   }
 }

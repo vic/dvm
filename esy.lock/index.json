@@ -1,5 +1,5 @@
 {
-  "checksum": "d9011defaf0d563fe5c7bc28f7cc1e93",
+  "checksum": "9ace0089e4fadadd3d18c91df0fa0414",
   "root": "dvm@link-dev:./esy.json",
   "node": {
     "yarn-pkg-config@github:esy-ocaml/yarn-pkg-config#cca65f99674ed2d954d28788edeb8c57fada5ed0@d41d8cd9": {
@@ -12,6 +12,20 @@
         "type": "install",
         "source": [
           "github:esy-ocaml/yarn-pkg-config#cca65f99674ed2d954d28788edeb8c57fada5ed0"
+        ]
+      },
+      "overrides": [],
+      "dependencies": [],
+      "devDependencies": []
+    },
+    "prettier@1.19.1@d41d8cd9": {
+      "id": "prettier@1.19.1@d41d8cd9",
+      "name": "prettier",
+      "version": "1.19.1",
+      "source": {
+        "type": "install",
+        "source": [
+          "archive:https://registry.npmjs.org/prettier/-/prettier-1.19.1.tgz#sha1:f7d7f5ff8a9cd872a7be4ca142095956a60797cb"
         ]
       },
       "overrides": [],
@@ -67,7 +81,9 @@
         "@opam/cmdliner@opam:1.0.4@93208aac",
         "@esy-ocaml/reason@3.5.2@d41d8cd9"
       ],
-      "devDependencies": [ "@opam/merlin@opam:3.3.3@d653b06a" ]
+      "devDependencies": [
+        "prettier@1.19.1@d41d8cd9", "@opam/merlin@opam:3.3.3@d653b06a"
+      ]
     },
     "@reason-native/pastel@0.2.2@d41d8cd9": {
       "id": "@reason-native/pastel@0.2.2@d41d8cd9",

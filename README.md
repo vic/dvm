@@ -1,7 +1,7 @@
 # dvm
 
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/imbsky/dvm/Main%20workflow?style=flat-square)](https://github.com/imbsky/dvm/actions)
-[![GitHub package.json version](https://img.shields.io/github/package-json/v/imbsky/dvm?style=flat-square)](https://github.com/imbsky/dvm/blob/master/package.json)
+[![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/imbsky/dvm?include_prereleases&style=flat-square)](https://github.com/imbsky/dvm/releases)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![GitHub](https://img.shields.io/github/license/imbsky/dvm?color=brightgreen&style=flat-square)](https://github.com/imbsky/dvm/blob/master/LICENSE)
 
