@@ -24,7 +24,7 @@ let default = {
           "Please report bugs using the issue tracker at https://github.com/imbsky/dvm/issues",
         ),
       ],
-      ~version=Package_Info.version,
+      ~version=Package_info.version,
     ),
   );
 };
