@@ -15,15 +15,9 @@ let default = {
   (
     Cmdliner.Term.(ret(const(_ => `Help((`Pager, None))) $ const())),
     Cmdliner.Term.info(
-      "dvm",
-      ~doc=
-        "Fast and simple Deno runtime version manager built with Native Reason.",
-      ~man=[
-        `S(Cmdliner.Manpage.s_bugs),
-        `P(
-          "Please report bugs using the issue tracker at https://github.com/imbsky/dvm/issues",
-        ),
-      ],
+      Package_info.name,
+      ~doc=Package_info.description,
+      ~man=[`S(Cmdliner.Manpage.s_bugs), `P(Package_info.issueTracker)],
       ~version=Package_info.version,
     ),
   );
