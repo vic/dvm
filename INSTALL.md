@@ -65,8 +65,8 @@ dvm init fish | source
 
 #### esy
 
-Before we can build dvm, we need to make sure that we have a latest esy. (We use
-asdf to manage our esy versions. You can get asdf via Git or Homebrew.)
+Before we can build dvm, we need to make sure that we have a latest esy. (We are
+using the nightly version of esy. We can use it by install `@esy-nightly/esy`.)
 
 ### Getting the source
 
