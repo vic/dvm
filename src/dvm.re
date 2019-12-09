@@ -11,6 +11,15 @@
  limitations under the License.
  */
 
+module Commands = {
+  let init = shell => Init.run(shell);
+  let install = version => Install.run(version);
+  let ls_remote = () => Ls_remote.run();
+  let ls = () => Ls.run();
+  let uninstall = version => Uninstall.run(version);
+  let use = version => Use.run(version);
+};
+
 let default = {
   let doc = Package_info.description;
   let man = [`S(Cmdliner.Manpage.s_bugs), `P(Package_info.issueTracker)];
@@ -20,15 +29,6 @@ let default = {
     Cmdliner.Term.(ret(const(_ => `Help((`Pager, None))) $ const())),
     Cmdliner.Term.info(Package_info.name, ~doc, ~man, ~version),
   );
-};
-
-module Commands = {
-  let init = shell => Init.run(shell);
-  let install = version => Install.run(version);
-  let ls_remote = () => Ls_remote.run();
-  let ls = () => Ls.run();
-  let uninstall = version => Uninstall.run(version);
-  let use = version => Use.run(version);
 };
 
 let init = {
