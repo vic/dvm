@@ -108,8 +108,8 @@ let use = {
 };
 
 let _ =
+  Cmdliner.Term.exit @@
   Cmdliner.Term.eval_choice(
     default,
     [init, install, ls_remote, ls, uninstall, use],
-  )
-  |> Cmdliner.Term.exit;
+  );
