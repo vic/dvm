@@ -43,6 +43,7 @@ See the file [INSTALL.md](INSTALL.md) for installation instructions.
 
 | Command                                          |  Mean [ms] | Min [ms] | Max [ms] | Relative |
 | :----------------------------------------------- | ---------: | -------: | -------: | -------: |
+| `deno --version`                                 |  5.1 ± 0.6 |      4.2 |      8.0 |     1.00 |
 | `deno https://deno.land/std/examples/welcome.ts` | 15.7 ± 0.5 |     13.5 |     16.6 |     1.00 |
 
 ### Official installer
@@ -51,12 +52,14 @@ See the file [INSTALL.md](INSTALL.md) for installation instructions.
 
 | Command                                          |  Mean [ms] | Min [ms] | Max [ms] | Relative |
 | :----------------------------------------------- | ---------: | -------: | -------: | -------: |
+| `deno --version`                                 |  5.2 ± 0.8 |      4.2 |      8.5 |     1.00 |
 | `deno https://deno.land/std/examples/welcome.ts` | 15.8 ± 0.5 |     14.4 |     17.1 |     1.00 |
 
 ### asdf-deno
 
 | Command                                          |     Mean [ms] | Min [ms] | Max [ms] | Relative |
 | :----------------------------------------------- | ------------: | -------: | -------: | -------: |
+| `deno --version`                                 |    93.4 ± 2.9 |     89.8 |    105.7 |     1.00 |
 | `deno https://deno.land/std/examples/welcome.ts` | 195.5 ± 170.0 |    137.3 |    679.1 |     1.00 |
 
 ## Bug reports and user feedback
