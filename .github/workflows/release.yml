@@ -40,7 +40,7 @@ jobs:
         run: esy build
 
       - name: Copy and rename binary
-        run: cp _esy/default/build/default/src/Dvm.exe ./dvm
+        run: cp _build/default/src/dvm.exe ./dvm
 
       - name: Prepare release asset
         run: tar -zcvf dvm-x86_64-${{ matrix.os }}.tar.gz dvm

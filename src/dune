@@ -1,5 +1,5 @@
 (executable
- (name Dvm)
+ (name dvm)
  (public_name dvm)
  (libraries cmdliner console.lib core core_kernel curl ezgzip pastel.lib rresult
    yojson)

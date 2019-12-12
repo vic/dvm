@@ -6,7 +6,8 @@
   "author": "BSKY <me@bsky.moe>",
   "license": "Apache-2.0",
   "esy": {
-    "build": "dune build --root . --only-packages #{self.name} --ignore-promoted-rules --no-config"
+    "build": "dune build --root . --only-packages #{self.name} --ignore-promoted-rules --no-config",
+    "buildsInSource": "_build"
   },
   "scripts": {
     "clean": "dune clean -p #{self.name}",
