@@ -11,7 +11,7 @@
  limitations under the License.
  */
 
-let version = "1.0.0";
+let version = "1.0.1";
 
 let name = "dvm";
 
