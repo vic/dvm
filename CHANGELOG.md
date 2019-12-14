@@ -2,10 +2,6 @@
 
 ## Unreleased
 
-### Packaging
-
-- OCaml version has been bumped to 4.09.0.
-
 ### Changed
 
 - Change all pastel colors to cyan.
