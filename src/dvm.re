@@ -107,7 +107,7 @@ let use = {
   );
 };
 
-let _ =
+let () =
   Cmdliner.Term.exit @@
   Cmdliner.Term.eval_choice(
     default,
