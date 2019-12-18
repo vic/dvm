@@ -18,14 +18,14 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2.0.0
 
       - name: Install libcurl4-openssl-dev package for Ubuntu
         if: matrix.os == 'ubuntu-latest'
         run: sudo apt install libcurl4-openssl-dev
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v1.3.0
         with:
           node-version: ${{ matrix.node-version }}
 
@@ -33,7 +33,6 @@ jobs:
         run: npm install --global esy
 
       - name: Install and build OCaml packages
-        if: steps.esy.outputs.cache-hit != 'true'
         run: esy
 
       - name: Build
@@ -46,7 +45,7 @@ jobs:
         run: tar -zcvf dvm-x86_64-${{ matrix.os }}.tar.gz dvm
 
       - name: Create release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v0.1.4
         with:
           files: dvm-x86_64-${{ matrix.os }}.tar.gz
         env:
