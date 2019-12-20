@@ -74,7 +74,7 @@
         "@opam/yojson@opam:1.7.0@7056d985",
         "@opam/rresult@opam:0.6.0@4b185e72",
         "@opam/reason@opam:3.5.2@f689c2cb",
-        "@opam/ocurl@opam:0.9.0@2c8b7338",
+        "@opam/ocurl@opam:0.9.0@d129fd73",
         "@opam/ezgzip@opam:0.2.3@08ae0839",
         "@opam/dune@opam:1.11.4@a7ccb7ae",
         "@opam/core_kernel@opam:v0.13.0@3cae740d",
@@ -1490,8 +1490,8 @@
         "@opam/dune@opam:1.11.4@a7ccb7ae", "@opam/base@opam:v0.13.0@93f21415"
       ]
     },
-    "@opam/ocurl@opam:0.9.0@2c8b7338": {
-      "id": "@opam/ocurl@opam:0.9.0@2c8b7338",
+    "@opam/ocurl@opam:0.9.0@d129fd73": {
+      "id": "@opam/ocurl@opam:0.9.0@d129fd73",
       "name": "@opam/ocurl",
       "version": "opam:0.9.0",
       "source": {
