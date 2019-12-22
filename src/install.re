@@ -20,6 +20,11 @@ let createDownloadUrl = version =>
   ++ System.arch
   ++ ".gz";
 
+let get_ok =
+  fun
+  | Ok(v) => v
+  | Error(_) => failwith("Invalid result value");
+
 let run = version => {
   let downloadUrl = createDownloadUrl(version);
   let installVersionDir = Filename.concat(Constant.installDir, version);
@@ -44,7 +49,7 @@ let run = version => {
 
   Core_kernel.Out_channel.write_all(
     binaryPath,
-    ~data=Rresult.R.get_ok(Http.Curl.get(downloadUrl) |> Ezgzip.decompress),
+    ~data=Http.Curl.get(downloadUrl) |> Ezgzip.decompress |> get_ok,
   );
 
   Core.Unix.chmod(binaryPath, ~perm=755);
