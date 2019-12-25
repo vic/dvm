@@ -21,6 +21,7 @@
     "@opam/dune": "1.11.4",
     "@opam/ezgzip": "0.2.3",
     "@opam/ocurl": "0.9.0",
+    "@opam/reason": "3.5.2",
     "@opam/yojson": "1.7.0",
     "@reason-native/console": "0.1.0",
     "@reason-native/pastel": "0.2.2",
