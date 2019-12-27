@@ -11,7 +11,7 @@
   },
   "scripts": {
     "clean": "dune clean -p #{self.name}",
-    "refmt": "bash -c 'esy refmt --parse=re --in-place **/*.re'",
+    "fmt": "esy dune build @fmt --auto-promote",
     "prettier": "bash -c 'prettier --write **/*.{json,md,yml}'"
   },
   "dependencies": {
