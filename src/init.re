@@ -11,7 +11,7 @@
  limitations under the License.
  */
 
-let run = shell => {
+let run = shell =>
   (
     switch (shell) {
     | "bash" => "export PATH=" ++ Constant.currentDir ++ ":$PATH"
@@ -20,4 +20,3 @@ let run = shell => {
     }
   )
   |> Console.log;
-};

@@ -11,9 +11,8 @@
  limitations under the License.
  */
 
-let decorateString = version => {
+let decorateString = version =>
   <Pastel> <Pastel color=Pastel.Cyan> "* " </Pastel> version </Pastel>;
-};
 
 let run = () => {
   if (!Sys.file_exists(Constant.installDir)) {
