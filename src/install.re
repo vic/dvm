@@ -13,14 +13,17 @@
  limitations under the License.
  */
 
-let createDownloadUrl = version =>
-  "https://github.com/denoland/deno/releases/download/v"
-  ++ version
-  ++ "/deno_"
-  ++ System.os
-  ++ "_"
-  ++ System.arch
-  ++ ".gz";
+let createDownloadUrl = version => {
+  let baseUrl = "https://github.com/denoland/deno/releases/download/v";
+
+  let rec stringConcat =
+    fun
+    | [] => ""
+    | [x, ...xs] => x ++ stringConcat(xs);
+
+  [baseUrl, version, "/deno_", System.os, "_", System.arch, ".gz"]
+  |> stringConcat;
+};
 
 let get_ok =
   fun
