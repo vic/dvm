@@ -6,7 +6,7 @@
   "author": "BSKY <me@bsky.moe>",
   "license": "Apache-2.0",
   "esy": {
-    "build": "dune build --root . --profile release --ignore-promoted-rules --no-config",
+    "build": "refmterr dune build --root . --profile release --ignore-promoted-rules --no-config",
     "buildsInSource": "_build"
   },
   "scripts": {
@@ -24,7 +24,8 @@
     "@opam/yojson": "1.7.0",
     "@reason-native/console": "0.1.0",
     "@reason-native/pastel": "0.2.3",
-    "ocaml": "4.08.1000"
+    "ocaml": "4.08.1000",
+    "refmterr": "3.3.0"
   },
   "devDependencies": {
     "@opam/merlin": "3.3.3",
