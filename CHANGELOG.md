@@ -6,6 +6,10 @@
 
 - `latest` command to install latest version.
 
+### Fixed
+
+- Fix typos in error messages.
+
 ## [1.0.1](https://github.com/imbsky/dvm/releases/tag/v1.0.1) - 2019-11-14
 
 ### Changed
