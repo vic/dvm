@@ -30,11 +30,11 @@ let os =
   switch (sysname) {
   | "Darwin" => "osx"
   | "Linux" => "linux"
-  | _ => failwith(sysname ++ " not supported")
+  | _ => failwith(sysname ++ " is not supported")
   };
 
 let arch =
   switch (machine) {
   | "x86_64" => "x64"
-  | _ => failwith(machine ++ " not supported")
+  | _ => failwith(machine ++ " is not supported")
   };
