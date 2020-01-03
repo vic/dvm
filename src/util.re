@@ -12,15 +12,4 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-let decorateString = version =>
-  <Pastel> <Pastel color=Pastel.Cyan> "* " </Pastel> version </Pastel>;
-
-let run = () => {
-  if (!Sys.file_exists(Constant.installDir)) {
-    Core.Unix.mkdir_p(Constant.installDir);
-  };
-
-  Core.Sys.ls_dir(Constant.installDir)
-  |> List.rev
-  |> List.iter(ver => ver |> decorateString |> Console.log);
-};
+let stripQuotes = str => String.sub(str, 2, String.length(str) - 3);

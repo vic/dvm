@@ -1,5 +1,11 @@
 # Changelog
 
+## [Unreleased]
+
+### Added
+
+- `latest` command to install latest version.
+
 ## [1.0.1](https://github.com/imbsky/dvm/releases/tag/v1.0.1) - 2019-11-14
 
 ### Changed
@@ -10,8 +16,7 @@
 
 ### Added
 
-- Added the feature to change the installation directory using the
-  `DVM_INSTALL_DIR` variable.
+- `DVM_INSTALL_DIR` variable to change the installation directory using the.
 
 ### Changed
 
@@ -32,10 +37,10 @@
 
 ### Fixed
 
-- Fixed an issue causing an error when attempting to install if the installation
+- Fix an issue causing an error when attempting to install if the installation
   directory does not exist.
 
-- Fixed an issue causing an error when trying to use a non-exist version.
+- Fix an issue causing an error when trying to use a non-exist version.
 
 ## [0.1.0](https://github.com/imbsky/dvm/releases/tag/v0.1.0) - 2019-11-20
 

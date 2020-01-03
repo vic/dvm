@@ -1,4 +1,4 @@
-// Copyright 2019 BSKY
+// Copyright 2019-2020 BSKY
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,8 +15,6 @@
 let decorateString = version =>
   <Pastel> <Pastel color=Pastel.Cyan> "* " </Pastel> version </Pastel>;
 
-let stripQuotes = str => String.sub(str, 2, String.length(str) - 3);
-
 let jsonParse = body =>
   body
   |> Yojson.Safe.from_string
@@ -27,7 +25,7 @@ let jsonParse = body =>
        ver
        |> Yojson.Safe.to_basic
        |> Yojson.Basic.to_string
-       |> stripQuotes
+       |> Util.stripQuotes
        |> decorateString
        |> Console.log
      );

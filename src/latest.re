@@ -12,15 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-let decorateString = version =>
-  <Pastel> <Pastel color=Pastel.Cyan> "* " </Pastel> version </Pastel>;
+let getLatestVersion = () =>
+  Http.Curl.get("https://api.github.com/repos/denoland/deno/releases/latest")
+  |> Yojson.Safe.from_string
+  |> Yojson.Safe.Util.member("tag_name")
+  |> Yojson.Safe.to_basic
+  |> Yojson.Basic.to_string
+  |> Util.stripQuotes;
 
-let run = () => {
-  if (!Sys.file_exists(Constant.installDir)) {
-    Core.Unix.mkdir_p(Constant.installDir);
-  };
-
-  Core.Sys.ls_dir(Constant.installDir)
-  |> List.rev
-  |> List.iter(ver => ver |> decorateString |> Console.log);
-};
+let run = () => Install.run(getLatestVersion());

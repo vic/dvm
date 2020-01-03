@@ -1,4 +1,4 @@
-// Copyright 2019 BSKY
+// Copyright 2019-2020 BSKY
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,6 +15,7 @@
 module Commands = {
   let init = shell => Init.run(shell);
   let install = version => Install.run(version);
+  let latest = () => Latest.run();
   let ls_remote = () => Ls_remote.run();
   let ls = () => Ls.run();
   let uninstall = version => Uninstall.run(version);
@@ -33,7 +34,7 @@ let default = {
 };
 
 let init = {
-  let doc = "Print the path to a Deno runtime.";
+  let doc = "Print the path to the Deno runtime.";
 
   Cmdliner.Term.(
     const(Commands.init)
@@ -43,7 +44,7 @@ let init = {
 };
 
 let install = {
-  let doc = "Install a specific version of a Deno runtime.";
+  let doc = "Install a specific version of the Deno runtime.";
   let argDoc = "Specify the version to install in $(docv).";
   let argDocv = "VERSION";
 
@@ -58,8 +59,17 @@ let install = {
   );
 };
 
+let latest = {
+  let doc = "Install the latest version of the Deno runtime";
+
+  Cmdliner.Term.(
+    app(const(Commands.latest), const()),
+    Cmdliner.Term.info("latest", ~doc),
+  );
+};
+
 let ls_remote = {
-  let doc = "List all remote versions of a Deno runtime.";
+  let doc = "List all remote versions of the Deno runtime.";
 
   Cmdliner.Term.(
     app(const(Commands.ls_remote), const()),
@@ -68,7 +78,7 @@ let ls_remote = {
 };
 
 let ls = {
-  let doc = "List installed versions of a Deno runtime.";
+  let doc = "List installed versions of the Deno runtime.";
 
   Cmdliner.Term.(
     app(const(Commands.ls), const()),
@@ -77,7 +87,7 @@ let ls = {
 };
 
 let uninstall = {
-  let doc = "Uninstall a specific version of a Deno runtime.";
+  let doc = "Uninstall a specific version of the Deno runtime.";
   let argDoc = "Specify the version to uninstall in $(docv).";
   let argDocv = "VERSION";
 
@@ -109,8 +119,8 @@ let use = {
 };
 
 let () =
-  Cmdliner.Term.exit @@
   Cmdliner.Term.eval_choice(
     default,
-    [init, install, ls_remote, ls, uninstall, use],
-  );
+    [init, install, latest, ls_remote, ls, uninstall, use],
+  )
+  |> Cmdliner.Term.exit;
