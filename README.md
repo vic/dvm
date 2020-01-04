@@ -24,14 +24,15 @@ See the file [INSTALL.md](INSTALL.md) for installation instructions.
 
 ## Usage
 
-| Command                 | Description                                     |
-| ----------------------- | ----------------------------------------------- |
-| dvm install [version]   | Install a specific version of a Deno runtime.   |
-| dvm uninstall [version] | Uninstall a specific version of a Deno runtime. |
-| dvm use [version]       | Set the Deno runtime version.                   |
-| dvm ls                  | List installed versions of a Deno runtime.      |
-| dvm ls-remote           | List all remote versions of a Deno runtime.     |
-| dvm init [shell name]   | Print the path to a Deno runtime.               |
+| Command                 | Description                                       |
+| ----------------------- | ------------------------------------------------- |
+| dvm init [shell name]   | Print the path to the Deno runtime.               |
+| dvm install [version]   | Install a specific version of the Deno runtime.   |
+| dvm latest              | Install the latest version of the Deno runtime.   |
+| dvm ls                  | List all remote versions of the Deno runtime.     |
+| dvm ls-remote           | List all remote versions of the Deno runtime.     |
+| dvm uninstall [version] | Uninstall a specific version of the Deno runtime. |
+| dvm use [version]       | Set the Deno runtime version.                     |
 
 | Variable          | Default  | Description                                |
 | ----------------- | -------- | ------------------------------------------ |
