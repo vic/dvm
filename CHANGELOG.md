@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased]
+## [1.1.0](https://github.com/imbsky/dvm/releases/tag/v1.1.0) - 2020-01-04
 
 ### Added
 
