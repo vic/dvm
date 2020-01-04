@@ -61,7 +61,7 @@ let install = {
 };
 
 let latest = {
-  let doc = "Install the latest version of the Deno runtime";
+  let doc = "Install the latest version of the Deno runtime.";
 
   Cmdliner.Term.(
     app(const(Commands.latest), const()),
