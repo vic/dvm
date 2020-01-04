@@ -1,2 +1,2 @@
 (dirs
- (:standard \ _esy node_modules))
+ (:standard \ _build _esy node_modules))
