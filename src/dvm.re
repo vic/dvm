@@ -28,9 +28,9 @@ let default = {
   let man = [`S(Cmdliner.Manpage.s_bugs), `P(Package_info.issueTracker)];
   let version = Package_info.version;
 
-  (
-    Cmdliner.Term.(ret(const(_ => `Help((`Pager, None))) $ const())),
-    Cmdliner.Term.info(Package_info.name, ~doc, ~man, ~version),
+  Cmdliner.Term.(
+    ret(const(_ => `Help((`Pager, None))) $ const()),
+    info(Package_info.name, ~doc, ~man, ~version),
   );
 };
 
@@ -40,7 +40,7 @@ let init = {
   Cmdliner.Term.(
     const(Commands.init)
     $ Cmdliner.Arg.(required & pos(0, some(string), None) & info([])),
-    Cmdliner.Term.info("init", ~doc),
+    info("init", ~doc),
   );
 };
 
@@ -56,7 +56,7 @@ let install = {
         & pos(0, some(string), None)
         & info([], ~doc=argDoc, ~docv=argDocv)
       ),
-    Cmdliner.Term.info("install", ~doc),
+    info("install", ~doc),
   );
 };
 
@@ -65,7 +65,7 @@ let latest = {
 
   Cmdliner.Term.(
     app(const(Commands.latest), const()),
-    Cmdliner.Term.info("latest", ~doc),
+    info("latest", ~doc),
   );
 };
 
@@ -74,17 +74,14 @@ let ls_remote = {
 
   Cmdliner.Term.(
     app(const(Commands.ls_remote), const()),
-    Cmdliner.Term.info("ls-remote", ~doc),
+    info("ls-remote", ~doc),
   );
 };
 
 let ls = {
   let doc = "List installed versions of the Deno runtime.";
 
-  Cmdliner.Term.(
-    app(const(Commands.ls), const()),
-    Cmdliner.Term.info("ls", ~doc),
-  );
+  Cmdliner.Term.(app(const(Commands.ls), const()), info("ls", ~doc));
 };
 
 let uninstall = {
@@ -99,7 +96,7 @@ let uninstall = {
         & pos(0, some(string), None)
         & info([], ~doc=argDoc, ~docv=argDocv)
       ),
-    Cmdliner.Term.info("uninstall", ~doc),
+    info("uninstall", ~doc),
   );
 };
 
@@ -115,7 +112,7 @@ let use = {
         & pos(0, some(string), None)
         & info([], ~doc=argDoc, ~docv=argDocv)
       ),
-    Cmdliner.Term.info("use", ~doc),
+    info("use", ~doc),
   );
 };
 
