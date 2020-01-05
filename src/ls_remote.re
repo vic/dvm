@@ -22,8 +22,8 @@ let printVersionList = body =>
   |> Yojson.Safe.Util.map(obj => obj |> Yojson.Safe.Util.member("name"))
   |> Yojson.Safe.Util.to_list
   |> List.rev
-  |> List.iter(ver =>
-       ver
+  |> List.iter(version =>
+       version
        |> Yojson.Safe.to_basic
        |> Yojson.Basic.to_string
        |> Util.stripQuotes

@@ -23,5 +23,5 @@ let run = () => {
 
   Core.Sys.ls_dir(Constant.installDir)
   |> List.rev
-  |> List.iter(ver => ver |> decorateString |> Console.log);
+  |> List.iter(version => version |> decorateString |> Console.log);
 };
