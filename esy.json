@@ -6,11 +6,11 @@
   "author": "BSKY <me@bsky.moe>",
   "license": "Apache-2.0",
   "esy": {
-    "build": "refmterr dune build --root . --profile release --ignore-promoted-rules --no-config",
+    "build": "refmterr dune build --for-release-of-packages=#{self.name}",
     "buildsInSource": "_build"
   },
   "scripts": {
-    "clean": "dune clean -p #{self.name}",
+    "clean": "dune clean --for-release-of-packages=#{self.name}",
     "fmt": "esy dune build @fmt --auto-promote",
     "prettier": "bash -c 'prettier --write **/*.{json,md,yml}'"
   },
