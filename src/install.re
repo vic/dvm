@@ -52,7 +52,7 @@ let run = version => {
 
   Core.Unix.mkdir_p(installVersionDir);
 
-  Core_kernel.Out_channel.write_all(
+  Core.Out_channel.write_all(
     binaryPath,
     ~data=Http.Curl.get(downloadUrl) |> Ezgzip.decompress |> get_ok,
   );
