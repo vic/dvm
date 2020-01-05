@@ -16,7 +16,7 @@
 let decorateString = version =>
   <Pastel> <Pastel color=Pastel.Cyan> "* " </Pastel> version </Pastel>;
 
-let jsonParse = body =>
+let printVersionList = body =>
   body
   |> Yojson.Safe.from_string
   |> Yojson.Safe.Util.map(obj => obj |> Yojson.Safe.Util.member("name"))
@@ -33,4 +33,4 @@ let jsonParse = body =>
 
 let run = () =>
   Http.Curl.get("https://api.github.com/repos/denoland/deno/tags")
-  |> jsonParse;
+  |> printVersionList;

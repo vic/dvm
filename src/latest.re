@@ -13,7 +13,7 @@
  limitations under the License.
  */
 
-let getLatestVersion = () =>
+let latestVersion =
   Http.Curl.get("https://api.github.com/repos/denoland/deno/releases/latest")
   |> Yojson.Safe.from_string
   |> Yojson.Safe.Util.member("tag_name")
@@ -21,4 +21,4 @@ let getLatestVersion = () =>
   |> Yojson.Basic.to_string
   |> Util.stripQuotes;
 
-let run = () => Install.run(getLatestVersion());
+let run = () => latestVersion |> Install.run;
