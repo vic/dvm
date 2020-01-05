@@ -26,6 +26,7 @@ See the file [INSTALL.md](INSTALL.md) for installation instructions.
 
 | Command                 | Description                                       |
 | ----------------------- | ------------------------------------------------- |
+| dvm gc                  | Purge unused versions of the Deno runtime.        |
 | dvm init [shell name]   | Print the path to the Deno runtime.               |
 | dvm install [version]   | Install a specific version of the Deno runtime.   |
 | dvm latest              | Install the latest version of the Deno runtime.   |

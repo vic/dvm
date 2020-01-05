@@ -14,6 +14,7 @@
  */
 
 module Commands = {
+  let gc = () => Gc.run();
   let init = shell => Init.run(shell);
   let install = version => Install.run(version);
   let latest = () => Latest.run();
@@ -32,6 +33,12 @@ let default = {
     ret(const(_ => `Help((`Pager, None))) $ const()),
     info(Package_info.name, ~doc, ~man, ~version),
   );
+};
+
+let gc = {
+  let doc = "Purge unused versions of the Deno runtime.";
+
+  Cmdliner.Term.(app(const(Commands.gc), const()), info("gc", ~doc));
 };
 
 let init = {
@@ -119,6 +126,6 @@ let use = {
 let () =
   Cmdliner.Term.eval_choice(
     default,
-    [init, install, latest, ls_remote, ls, uninstall, use],
+    [gc, init, install, latest, ls_remote, ls, uninstall, use],
   )
   |> Cmdliner.Term.exit;

@@ -1,5 +1,11 @@
 # Changelog
 
+## [Unreleased]
+
+### Added
+
+- `gc` command to purge unused versions of Deno runtime.
+
 ## [1.1.0](https://github.com/imbsky/dvm/releases/tag/v1.1.0) - 2020-01-04
 
 ### Added
