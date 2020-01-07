@@ -39,7 +39,7 @@ jobs:
       - name: Install esy
         run: npm install --global esy
 
-      - name: Install and build OCaml packages
+      - name: Install and build opam packages
         run: esy
 
       - name: Copy and rename binary
