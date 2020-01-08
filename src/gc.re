@@ -14,7 +14,7 @@
  */
 
 let containsSubstring = (search, target) =>
-  Core.String.substr_index(search, target) != None;
+  Core.String.substr_index(search, ~pattern=target) != None;
 
 let removeUnusedVersion = (version, isUsed) =>
   isUsed
