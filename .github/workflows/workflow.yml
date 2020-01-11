@@ -12,8 +12,10 @@ jobs:
 
     strategy:
       matrix:
-        os: [ubuntu-latest, macOS-latest]
-        node-version: [13.x]
+        os: [ubuntu-latest, macos-latest]
+
+    env:
+      node-version: 13.x
 
     runs-on: ${{ matrix.os }}
 
@@ -25,10 +27,10 @@ jobs:
         if: matrix.os == 'ubuntu-latest'
         run: sudo apt install libcurl4-openssl-dev
 
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js ${{ env.node-version }}
         uses: actions/setup-node@v1.3.0
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: ${{ env.node-version }}
 
       - name: Restore esy cache
         uses: actions/cache@v1.1.0
