@@ -17,7 +17,7 @@
   "dependencies": {
     "@opam/cmdliner": "1.0.4",
     "@opam/core": "v0.13.0",
-    "@opam/dune": "2.1.1",
+    "@opam/dune": "2.1.2",
     "@opam/ezgzip": "0.2.3",
     "@opam/ocurl": "0.9.0",
     "@opam/yojson": "1.7.0",
