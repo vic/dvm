@@ -37,7 +37,7 @@
 - Symbolic link is now removed if the version being uninstalled matches the
   version set as the global version.
 
-- Changed the list and list-all commands to ls and ls -remote to avoid module
+- Changed the list and list-all commands to ls and ls-remote to avoid module
   name conflicts.
 
 - Use the tags API instead of the release API to speed up the retrieval of a
