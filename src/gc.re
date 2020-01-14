@@ -20,6 +20,7 @@ let removeUnusedVersion = (version, isUsed) =>
   if (isUsed) {
     Console.log(
       <Pastel>
+        "\n"
         <Pastel color=Pastel.Cyan underline=true> version </Pastel>
         " was not removed because it's the current version."
       </Pastel>,
