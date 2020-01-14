@@ -13,29 +13,37 @@
  limitations under the License.
  */
 
-let containsSubstring = (search, target) =>
-  Core.String.substr_index(search, ~pattern=target) != None;
+let containsSubstring = (search, pattern) =>
+  Core.String.substr_index(search, ~pattern) != None;
 
 let removeUnusedVersion = (version, isUsed) =>
-  isUsed
-    ? Console.log(
-        <Pastel>
-          <Pastel color=Pastel.Cyan underline=true> version </Pastel>
-          " was not removed because it's the current version"
-        </Pastel>,
-      )
-    : System.rmrf(Filename.concat(Constant.installDir, version));
+  if (isUsed) {
+    Console.log(
+      <Pastel>
+        <Pastel color=Pastel.Cyan underline=true> version </Pastel>
+        " was not removed because it's the current version."
+      </Pastel>,
+    );
+  } else {
+    System.rmrf(Filename.concat(Constant.installDir, version));
+    Console.log(
+      <Pastel>
+        <Pastel color=Pastel.Cyan underline=true> version </Pastel>
+        " was successfully purged!"
+      </Pastel>,
+    );
+  };
 
-let run = () => {
-  Core.Sys.ls_dir(Constant.installDir)
-  |> List.rev
-  |> List.iter(version =>
-       version
-       |> containsSubstring(
-            Filename.concat(Constant.currentDir, "deno") |> Unix.readlink,
-          )
-       |> removeUnusedVersion(version)
-     );
-
-  Console.log("Purged unused versions of the Deno runtime");
-};
+let run = () =>
+  if (Sys.file_exists(Constant.currentSymLinkPath)) {
+    Core.Sys.ls_dir(Constant.installDir)
+    |> List.rev
+    |> List.iter(version =>
+         version
+         |> containsSubstring(Constant.currentSymLinkPath |> Unix.readlink)
+         |> removeUnusedVersion(version)
+       );
+  } else {
+    Console.log("Could not run gc because the current version is not set.");
+    exit(1);
+  };
