@@ -5,7 +5,7 @@
 ### Added
 
 - `gc` command to purge unused versions of Deno runtime.
-- `set_noprogress` option to Http module to print the download progress.
+- `set_noprogress` option to curl module to print the download progress.
 
 ## [1.1.0](https://github.com/imbsky/dvm/releases/tag/v1.1.0) - 2020-01-04
 
