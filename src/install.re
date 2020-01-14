@@ -25,7 +25,8 @@ let createDownloadUrl = version =>
 let get_ok =
   fun
   | Ok(v) => v
-  | Error(_) => failwith("Invalid result value");
+  | Error(_) =>
+    failwith("This version does not exist in the GitHub release.");
 
 let run = version => {
   let downloadUrl = createDownloadUrl(version);
@@ -39,7 +40,7 @@ let run = version => {
   if (Sys.file_exists(installVersionDir)) {
     Console.log(
       <Pastel>
-        "Deno runtime version "
+        "\nDeno runtime version "
         <Pastel color=Pastel.Cyan underline=true> version </Pastel>
         " is already installed."
       </Pastel>,
@@ -51,14 +52,17 @@ let run = version => {
 
   Core.Out_channel.write_all(
     binaryPath,
-    ~data=Http.Curl.get(downloadUrl) |> Ezgzip.decompress |> get_ok,
+    ~data=
+      Http.Curl.get(downloadUrl, ~progress=true)
+      |> Ezgzip.decompress
+      |> get_ok,
   );
 
   Core.Unix.chmod(binaryPath, ~perm=755);
 
   Console.log(
     <Pastel>
-      "Deno runtime version "
+      "\nDeno runtime version "
       <Pastel color=Pastel.Cyan underline=true> version </Pastel>
       " was successfully installed!"
     </Pastel>,
