@@ -16,7 +16,6 @@
 let run = version => {
   let installVersionDir = Filename.concat(Constant.installDir, version);
   let binaryPath = Filename.concat(installVersionDir, "deno");
-  let currentBinaryPath = Filename.concat(Constant.currentDir, "deno");
 
   if (!Sys.file_exists(binaryPath)) {
     Console.log(
@@ -33,16 +32,20 @@ let run = version => {
     Core.Unix.mkdir_p(Constant.currentDir);
   };
 
-  if (Sys.file_exists(currentBinaryPath)) {
-    Sys.remove(currentBinaryPath);
+  if (Sys.file_exists(Constant.currentSymLinkPath)) {
+    Sys.remove(Constant.currentSymLinkPath);
   };
 
-  Core.Unix.symlink(~target=binaryPath, ~link_name=currentBinaryPath);
+  Core.Unix.symlink(
+    ~target=binaryPath,
+    ~link_name=Constant.currentSymLinkPath,
+  );
 
   Console.log(
     <Pastel>
-      "Now using Deno runtime "
+      "\nNow using Deno runtime "
       <Pastel color=Pastel.Cyan underline=true> version </Pastel>
+      "."
     </Pastel>,
   );
 };

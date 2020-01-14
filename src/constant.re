@@ -22,3 +22,5 @@ let dvmDir = Filename.concat(installDirPath, ".dvm");
 let installDir = Filename.concat(dvmDir, "installs");
 
 let currentDir = Filename.concat(dvmDir, "current");
+
+let currentSymLinkPath = Filename.concat(currentDir, "deno");
