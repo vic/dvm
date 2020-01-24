@@ -24,11 +24,14 @@
     "@opam/yojson": "1.7.0",
     "@reason-native/console": "0.1.0",
     "@reason-native/pastel": "0.2.3",
-    "ocaml": "4.08.1000",
+    "ocaml": "4.9.0",
     "refmterr": "3.3.0"
   },
   "devDependencies": {
-    "@opam/merlin": "3.3.3",
+    "@opam/ocaml-lsp-server": "*",
     "prettier": "1.19.1"
+  },
+  "resolutions": {
+    "@opam/ocaml-lsp-server": "ocaml/ocaml-lsp:ocaml-lsp-server.opam#007a1af"
   }
 }
