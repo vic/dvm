@@ -1,5 +1,5 @@
 {
-  "checksum": "2c2faffc75e5e0abc0f4f028bef87953",
+  "checksum": "5c95b61d7412087c88d09dd183858016",
   "root": "dvm@link-dev:./esy.json",
   "node": {
     "yarn-pkg-config@github:esy-ocaml/yarn-pkg-config#cca65f99674ed2d954d28788edeb8c57fada5ed0@d41d8cd9": {
@@ -101,7 +101,7 @@
       ],
       "devDependencies": [
         "prettier@1.19.1@d41d8cd9",
-        "@opam/ocaml-lsp-server@github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#007a1af@d41d8cd9"
+        "@opam/ocaml-lsp-server@github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#5e864ab@d41d8cd9"
       ]
     },
     "@reason-native/pastel@0.2.3@d41d8cd9": {
@@ -1687,14 +1687,14 @@
         "@opam/dune@opam:2.2.0@dd1e4ee7"
       ]
     },
-    "@opam/ocaml-lsp-server@github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#007a1af@d41d8cd9": {
+    "@opam/ocaml-lsp-server@github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#5e864ab@d41d8cd9": {
       "id":
-        "@opam/ocaml-lsp-server@github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#007a1af@d41d8cd9",
+        "@opam/ocaml-lsp-server@github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#5e864ab@d41d8cd9",
       "name": "@opam/ocaml-lsp-server",
-      "version": "github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#007a1af",
+      "version": "github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#5e864ab",
       "source": {
         "type": "install",
-        "source": [ "github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#007a1af" ]
+        "source": [ "github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#5e864ab" ]
       },
       "overrides": [],
       "dependencies": [
