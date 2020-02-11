@@ -28,7 +28,7 @@ jobs:
         run: sudo apt install libcurl4-openssl-dev
 
       - name: Use Node.js ${{ env.node-version }}
-        uses: actions/setup-node@v1.3.0
+        uses: actions/setup-node@v1.4.0
         with:
           node-version: ${{ env.node-version }}
 
