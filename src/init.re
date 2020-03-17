@@ -1,9 +1,9 @@
 let run = shell =>
   (
     switch (shell) {
-    | "bash" => "export PATH=" ++ Constant.currentDir ++ ":$PATH"
-    | "fish" => "set -gx PATH " ++ Constant.currentDir ++ " $PATH;"
-    | _ => failwith(shell ++ " is not supported.")
+    | "bash" => Printf.sprintf("export PATH=%s:$PATH", Constant.currentDir)
+    | "fish" => Printf.sprintf("set -gx PATH %s $PATH;", Constant.currentDir)
+    | _ => failwith(Printf.sprintf("%s is not supported.", shell))
     }
   )
   |> Console.log;

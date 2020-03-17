@@ -1,11 +1,10 @@
 let createDownloadUrl = version =>
-  "https://github.com/denoland/deno/releases/download/v"
-  ++ version
-  ++ "/deno_"
-  ++ System.os
-  ++ "_"
-  ++ System.arch
-  ++ ".gz";
+  Printf.sprintf(
+    "https://github.com/denoland/deno/releases/download/v%s/deno_%s_%s.gz",
+    version,
+    System.os,
+    System.arch,
+  );
 
 let get_ok =
   fun
