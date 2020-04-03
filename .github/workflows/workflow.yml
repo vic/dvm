@@ -8,8 +8,6 @@ on:
 
 jobs:
   build:
-    if: github.repository == 'imbsky/dvm'
-
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest]
@@ -21,7 +19,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2.0.0
+        uses: actions/checkout@v2.1.0
 
       - name: Install libcurl4-openssl-dev package for Ubuntu
         if: matrix.os == 'ubuntu-latest'
