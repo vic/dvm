@@ -1,9 +1,6 @@
 # dvm
 
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/imbsky/dvm/Main%20workflow?style=flat-square)](https://github.com/imbsky/dvm/actions)
-[![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/imbsky/dvm?include_prereleases&style=flat-square)](https://github.com/imbsky/dvm/releases)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![GitHub](https://img.shields.io/github/license/imbsky/dvm?color=brightgreen&style=flat-square)](https://github.com/imbsky/dvm/blob/master/LICENSE)
+[![Main workflow](https://github.com/imbsky/dvm/workflows/Main%20workflow/badge.svg?branch=master)](https://github.com/imbsky/dvm/actions)
 
 ## Overview
 
@@ -17,10 +14,6 @@ link directly to executable in the PATH. The version resolution is out of the
 way and is faster. Commands that try to find themselves in the PATH find the
 expected location. And you don't need any extra dependencies, you can use it
 right away.
-
-## Installation
-
-See the file [INSTALL.md](INSTALL.md) for installation instructions.
 
 ## Usage
 

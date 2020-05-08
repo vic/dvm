@@ -1,7 +1,4 @@
 _build/
-_esy/
-_release/
-node_modules/
-
-*.install
+_opam/
+.vscode/
 .merlin

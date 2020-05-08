@@ -1,10 +1,8 @@
 name: Main workflow
 
 on:
-  push:
-    branches:
-      - master
-  pull_request:
+  - push
+  - pull_request
 
 jobs:
   build:
@@ -13,8 +11,8 @@ jobs:
         os:
           - macos-latest
           - ubuntu-latest
-        node-version:
-          - 13.x
+        ocaml-version:
+          - 4.10.0
 
     runs-on: ${{ matrix.os }}
 
@@ -22,29 +20,18 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install libcurl4-openssl-dev package for Ubuntu
-        if: runner.os == 'Linux'
-        run: sudo apt-get install libcurl4-openssl-dev
-
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - name: Use OCaml ${{ matrix.ocaml-version }}
+        uses: avsm/setup-ocaml@v1
         with:
-          node-version: ${{ matrix.node-version }}
+          ocaml-version: ${{ matrix.ocaml-version }}
 
-      - name: Restore esy cache
-        uses: actions/cache@v1
-        id: esy
-        with:
-          path: ~/.esy
-          key: ${{ runner.os }}-esy-${{ hashFiles('esy.lock/index.json') }}
-          restore-keys: |
-            ${{ runner.os }}-esy-
+      - run: opam pin add dvm.dev . --no-action
 
-      - name: Install esy
-        run: npm install --global esy
+      - run: opam depext dvm --yes --with-doc --with-test
 
-      - name: Install and build opam packages
-        run: esy
+      - run: opam install . --deps-only --with-doc --with-test
+
+      - run: opam exec -- dune build
 
       - name: Copy and rename binary
         run: cp _build/default/src/dvm.exe ./dvm
