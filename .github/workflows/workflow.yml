@@ -43,11 +43,11 @@ jobs:
           path: dvm
 
       - name: Prepare release asset
-        if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')
+        if: contains(github.ref, 'refs/tags')
         run: tar -zcvf dvm-x86_64-${{ matrix.os }}.tar.gz dvm
 
       - name: Create release
-        if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')
+        if: contains(github.ref, 'refs/tags')
         uses: softprops/action-gh-release@v1
         with:
           files: dvm-x86_64-${{ matrix.os }}.tar.gz
