@@ -1,0 +1,3 @@
+(library
+ (name dvm)
+ (libraries base cohttp-lwt-unix dune-build-info lwt.unix yojson))

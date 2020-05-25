@@ -1,4 +1,0 @@
-pin-depends: [
-  [ "console.dev" "git+https://github.com/facebookexperimental/reason-native.git" ]
-  [ "pastel.dev" "git+https://github.com/facebookexperimental/reason-native.git" ]
-]

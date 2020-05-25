@@ -11,6 +11,7 @@ jobs:
         os:
           - macos-latest
           - ubuntu-latest
+          - windows-latest
         ocaml-version:
           - 4.10.0
 
@@ -34,7 +35,7 @@ jobs:
       - run: opam exec -- make build
 
       - name: Copy and rename binary
-        run: cp _build/default/src/dvm.exe ./dvm
+        run: cp _build/default/bin/main.exe ./dvm
 
       - name: Upload binary to artifact
         uses: actions/upload-artifact@v2

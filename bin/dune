@@ -1,0 +1,4 @@
+(executable
+ (public_name dvm)
+ (name main)
+ (libraries cmdliner dvm))
