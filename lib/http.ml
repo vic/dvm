@@ -12,7 +12,7 @@ let get_location headers =
   | Some str -> str
 
 let rec fetch uri =
-  Client.get @@ Uri.of_string uri >>= fun (response, body) ->
+  Client.get (Uri.of_string uri) >>= fun (response, body) ->
   if is_redirection response.status then
     get_location response.headers |> fun location -> fetch location
   else
