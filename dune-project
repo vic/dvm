@@ -32,4 +32,5 @@
   dune-build-info
   lwt
   ocaml
+  tls
   yojson))
