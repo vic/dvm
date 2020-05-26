@@ -48,7 +48,17 @@ let command version =
     exit 1
   ) else
     Unix.mkdir install_version_dir 0o755;
-  if version > "0.35.0" then (
+  let target_version =
+    match Semver.of_string version with
+    | None -> failwith "Invalid version"
+    | Some version -> version
+  in
+  let fork_version =
+    match Semver.of_string "0.35.0" with
+    | None -> failwith "Invalid version"
+    | Some version -> version
+  in
+  if Semver.greater_than target_version fork_version then (
     let* () = Http.get url ~path in
     let* _ =
       Lwt_process.exec ("", [| "unzip"; path; "-d"; install_version_dir |])
